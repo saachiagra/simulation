@@ -3,15 +3,65 @@
     <title>I don't know what I'm doing!</title> 
 </head>
  <body>
-    <p align="center"> 
-	<!--This draws the Canvas on the webpage -->
+    <!--p align="center"> 
+	<This draws the Canvas on the webpage>
       <canvas id="mycanvas"></canvas> 
+    </p-->
+    <style>
+      #Canvas1 {
+        border-width: 5px;
+        border-color: black;
+      }
+    </style>
+    <h1>Climate Change: A Simulation</h1>
+    <p>
+      This is some text I'm writing because I have no idea what I'm doing!
     </p>
+    <p> Here's some more text that I'm hoping looks decent. </p>
+    <!--iframe src="https://www.wikipedia.com" height="500" width="800"></iframe-->
+    <!--canvas id="Canvas1" width="400" height="100" onmousemove="showCoords(event)" onmouseout="clearCoor()"></canvas-->
+    <canvas id="Canvas1" height="300"></canvas>
+    <script src="heatisland.js"></script>
+    <p id="demo"></p>
+    <button onclick="startLight()">Start</button>
+    <button onclick="reset()">Reset</button>
+    <!--script>
+      var canvas = document.getElementById("Canvas1");
+      var ctx = canvas.getContext("2d");
+      var xCoor = 95;
+      ctx.beginPath();
+        ctx.arc(xCoor,50,15,0,2*Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "blue";
+        ctx.fill();
+      function showCoords(event) {
+        xCoor = event.clientX;
+        var y = event.clientY;
+        var coor = "X coords: " + xCoor + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coor;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(xCoor,50,15,0,2*Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "blue";
+        ctx.fill();
+      }
+      function clearCoor(event) {
+        document.getElementById("demo").innerHTML = "";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(xCoor,50,15,0,2*Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "blue";
+        ctx.fill();
+      }
+    </script-->
  </body>
  
  <!-- Run all the JavaScript stuff -->
  <!-- Include the processing.js library -->
  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
- <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
- <script src="simoutline.js"></script>
+ <!--script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script-->
+ <!--script src="simoutline.js"--><!--/script-->
+ 
 </html>
