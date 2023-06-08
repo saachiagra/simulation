@@ -1,0 +1,55 @@
+<html> 
+ <head>
+    <title>I don't know what I'm doing!</title> 
+</head>
+ <body>
+    <p align="center"> 
+	<!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+        
+        // ProgramCodeGoesHere
+        background (255, 255, 255);
+        strokeWeight(5);
+        fill(255, 255, 255);
+
+        /*ellipse(200, 50, 50, 50);
+        //main body line
+        line(200, 75, 200, 150);
+        //left arm
+        line(200, 90, 175, 150);
+        //right arm
+        line(200, 90, 225, 150);
+        //left leg
+        line(200, 150, 190, 190);
+        line(190, 190, 190, 233);
+        //right leg
+        line(200, 150, 210, 190);
+        line(210, 190, 210, 233);
+        */
+        draw = function() {
+            background (255, 255, 255);
+            line(200, 200, )
+        };
+        
+        }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
