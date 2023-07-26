@@ -1,6 +1,6 @@
 <html> 
  <head>
-    <title>I don't know what I'm doing!</title> 
+    <title>Climate Change: A Simulation</title> 
 </head>
  <body>
     <!--p align="center"> 
@@ -8,23 +8,96 @@
       <canvas id="mycanvas"></canvas> 
     </p-->
     <style>
+
       #Canvas1 {
         border-width: 5px;
         border-color: black;
       }
+
+      #Canvas2 {
+        border-width: 5px;
+        border-color: black;
+      }
+
     </style>
     <h1>Climate Change: A Simulation</h1>
-    <p>
-      This is some text I'm writing because I have no idea what I'm doing!
-    </p>
-    <p> Here's some more text that I'm hoping looks decent. </p>
+    <script src="generalfunctions.js"></script>
+    
+    <h2>Introduction</h2>
+      <!--TODO: put images here-->
+      <p>Blazing flames making their way through dense shrubbery with no regard for the beings within the area. 
+      Blizzards that steal any potential source of warmth and destroy systems that millions of people rely on. 
+      Relentless heat waves which make you think you’re about to melt onto the sidewalk. 
+      Rapid floods that seep into homes and fill up the basement with sewage water. </p>
+    
+      <p>Natural disasters have always been a part of weather phenomena, but lately,
+      the number and severity of these events seemed to have increased tremendously.
+      But wait, before you cite the two c-words as the source of this calamity,
+      let’s step back and talk about weather. </p>
+
+    <h2>Weather</h2>
+      <p>Weather, defined by the National Centers for Environmental Information,
+      is the “mix of events that happen each day in our atmosphere” (1). 
+      Weather can change within mere minutes and includes phenomena like rain, wind, and snow. 
+      A single instance of a natural disaster would fall under the weather category. </p>
+      <p>But it seems like we’ve had more of these storms recently, right? 
+      The term “weather” is used to describe what happens in a given instance, 
+      not justify long-term trends…</p>
+    
+    <h2>Climate</h2>
+      <p>Climate is “what the weather is like over a long period of time in a specific area” (1). 
+      So the weather that an area usually experiences is considered the climate of that location. </p>
+      <p>In order to determine the climate characteristics of a region, 
+      scientists take measurements of different variables such as temperature, 
+      precipitation, wind, cloud cover, humidity, and even aerosols over a period of time (2). 
+      There is a such thing as global climate: the average weather conditions for the entire planet 
+      over a certain period of time (1). </p>
+      <p>Although there are more nuances to how these variables are used for calculations, 
+      typically averages are used. For example, rainfall records are taken over a year 
+      to calculate the annual precipitation levels of an area, which characterizes the 
+      climate based on how dry or wet the region is. </p>
+      <p>Let’s use the variable temperature for some demonstrations. </p>
+    
+    <h2>Temperature</h2>
+      <p>Below is a graph for the average global temperature from 1850 to 2023. 
+      This data consists of average temperature readings taken during the month of June, 
+      and all the data points are in &deg;C. </p>
+      <!--TODO: temperature sim-->
+
+      <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+
+      <p>Let’s analyze the overarching trend of the graph. It looks like the temperature is generally
+      increasing as time progresses, and we see a steady uptick in temperatures starting from 
+      about the 1980s. </p>
+      <p>However, there’s an important question that should be asked: 
+      how was the temperature data collected in the first place?</p>
+      <p>The history of measuring fluctuations in temperature goes all the way back to 1610, 
+      when Galileo made a thermoscope using a glass sphere containing alcohols each with different densities (3). 
+      The alcohols would rise and fall within the container based on the ambient temperature, 
+      but this device didn’t have any markings to determine the exact temperature, hence why it’s not 
+      considered a “thermometer” (3). In 1612, Santorio Santorio made a thermoscope calibrated to measure 
+      human temperature, and in 1654, Ferdinand II de’ Medici made a thermometer “to depend on the expansion 
+      and contraction of a liquid, which was independent of barometric pressure” (3). </p>
+      <p>The first set of continuous temperature readings from thermometers comes from the 
+      Central England Temperature Data Series, which started in 1659 (4). Though, we don’t have 
+      substantial data on global temperatures before the 1880s. </p>
+
     <!--iframe src="https://www.wikipedia.com" height="500" width="800"></iframe-->
     <!--canvas id="Canvas1" width="400" height="100" onmousemove="showCoords(event)" onmouseout="clearCoor()"></canvas-->
     <canvas id="Canvas1" height="300"></canvas>
+    <!--TEMPERATURE SIMULATION-->
+    <script src="firstcanvas.js"></script>
+    <p id="temp1"></p>
+
+    <canvas id="Canvas2" height="300"></canvas>
     <script src="heatisland.js"></script>
     <p id="demo"></p>
     <button onclick="startLight()">Start</button>
     <button onclick="reset()">Reset</button>
+    <br>
+
+    <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+
     <!--script>
       var canvas = document.getElementById("Canvas1");
       var ctx = canvas.getContext("2d");

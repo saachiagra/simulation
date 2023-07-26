@@ -40,26 +40,8 @@ function showCoords(event) {
         ctx.fillStyle = "blue";
         ctx.fill();
       } */
-var canvas = document.getElementById("Canvas1");
+var canvas = document.getElementById("Canvas2");
 var ctx = canvas.getContext("2d");
-
-var isClick = false;
-var mouseX = undefined;
-var mouseY = undefined;
-window.addEventListener('mousedown', 
-  function(event) {
-    isClick = true;
-});
-window.addEventListener('mouseup', 
-  function(event) {
-    isClick = false;
-});
-window.addEventListener('mousemove', 
-  function(event) {
-    mouseX = event.x;
-    mouseY = event.y;
-  }
-);
 
 var x = 25;
 var y = 275;
@@ -76,10 +58,14 @@ var lightVX = [];
 var lightY = [];
 var lightVY = [];
 var startSim = false;
+
+//generates coordinates for 5 initial molecules
 for (var i = 0; i < 5; i++) {
   coordXArray[i] = Math.round(Math.random()*200 + 75);
   coordYArray[i] = Math.round(Math.random()*50 + 87);
 }
+
+//generating more molecule coordinates based on slider's position
 function addCircles() {
   var add = Math.round(x/5) - coordXArray.length;
   for (var i = 0; i < add; i++) {
@@ -95,11 +81,13 @@ function addCircles() {
         }
       }
     } while (getNew);
+
     coordXArray[i+coordXArray.length] = newX;
     coordYArray[i+coordXArray.length] = newY;
   }
 }
 
+//removes molecule coordinates based on slider's position
 function removeCircles() {
   var subtract = coordXArray.length - Math.round(x/5);
   for (var i = 0; i < subtract; i++) {
@@ -108,6 +96,7 @@ function removeCircles() {
   }
 }
 
+//adding dx and dy to light particles' position each time animate() is called
 function moveLight() {
   for (var a = 0; a < lightX.length; a++) {
     lightX[a] += lightVX[a];
@@ -128,6 +117,7 @@ function moveLight() {
   }   
 }
 
+//adds coordinates and dx/dy values for new light particle
 function addLightP() {
   var last = lightX.length;
   lightX[last] = 25;
@@ -136,6 +126,7 @@ function addLightP() {
   lightVY[last] = Math.round((Math.random()*2 + 1)*1000)/1000;
 }
 
+//removes light particle's coordinates if it goes offscreen
 function removeLightP() {
   for (var i = 0; i < lightX.length; i++) {
     if (lightX[i] < 0 || lightY[i] < 0) {
@@ -147,10 +138,7 @@ function removeLightP() {
   }
 }
 
-function getDistance(x1, x2, y1, y2) {
-  return Math.sqrt((Math.pow(Math.abs(y2-y1), 2)) + (Math.pow(Math.abs(x2-x1), 2)));
-}
-
+//sees if light particle collides with molecule
 function checkCollide() {
   for (var i = 0; i < lightX.length; i++) {
     for (var j = 0; j < coordXArray.length; j++) {
@@ -162,7 +150,8 @@ function checkCollide() {
   }
 }
 
-//fix this!
+//makes light particle bounce off molecule
+//twas absolute pain to make this work
 function momentum(a, b) {
   var angle;
   if (Math.round((lightX[a] - coordXArray[b])*1000)/1000 != 0) {
@@ -185,29 +174,7 @@ function momentum(a, b) {
   lightVY[a] += dy;
 }
 
-function Circle(xPos, yPos, rad, lineW, fill, yesStroke) {
-  this.xPos = xPos;
-  this.yPos = yPos;
-  ctx.beginPath();
-  ctx.arc(this.xPos, this.yPos, rad, 0, 2 * Math.PI);
-  if (yesStroke) {
-    ctx.lineWidth = lineW;
-    ctx.stroke();
-  }
-  ctx.fillStyle = fill;
-  ctx.fill();
-
-}
-
-function Line(x1, y1, x2, y2, lineW) {
-  ctx.beginPath();
-  ctx.moveTo(x1, y1);
-  ctx.lineTo(x2, y2);
-  ctx.lineWidth = lineW;
-  ctx.fillStyle = "black";
-  ctx.stroke();
-}
-
+//start and reset correspond to buttons
 function startLight() {
   startSim = true;
 }
@@ -220,54 +187,59 @@ var counter = 55;
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
   /*ctx.font = "20px Arial";
   ctx.fillStyle = "black";
   ctx.fillText("Temperature: " + x, 10, 50);*/
-  var ground = new Line(0, y-25, 300, y-25, 3);
-  var sliderLine = new Line(0, y, 300, y, 1.5);
-  var slider = new Circle(x, y, radiusS, sliderWidth, color, true); 
+  var ground = new Line(ctx, 0, y-25, 300, y-25, 3);
+  var sliderLine = new Line(ctx, 0, y, 300, y, 1.5);
+  var slider = new Circle(ctx, x, y, radiusS, color, true, sliderWidth, "black"); 
   var coor = "Value: " + Math.round(x/5);
   document.getElementById("demo").innerHTML = coor;
-    for (var j = 0; j < coordXArray.length; j++) {
-      new Circle(coordXArray[j], coordYArray[j], radiusC, 0, "#505d6b", false);
+  for (var j = 0; j < coordXArray.length; j++) {
+    new Circle(ctx, coordXArray[j], coordYArray[j], radiusC, "#505d6b", false, 0, null);
+  }
+  if (startSim) {
+    counter++;
+    if (counter > 60 && lightX.length < 10) {
+      addLightP();
+      counter = 0;
     }
-    if (startSim) {
-      counter++;
-      if (counter > 60 && lightX.length < 10) {
-        addLightP();
-        counter = 0;
-      }
-      for (var k = 0; k < lightX.length; k++) {
-        new Circle(lightX[k], lightY[k], radiusL, 0, "#fcba03", false);
-      }
-      moveLight();
-      removeLightP();
-      checkCollide();
-    } else {
-      var rect = canvas.getBoundingClientRect();
-      var canvX = mouseX - rect.left;
-      var canvY = mouseY - rect.top;
-      var insideCircle = (canvX < x + radiusS + 5) && (canvX > x - radiusS - 5)  && (canvY < y + radiusS + 5)  && (canvY > y - radiusS - 5);
-      if (insideCircle) {
-        color = "#3569a1";
-        sliderWidth = 5;
-        var dx = (x - mouseX)/60;
-        if (isClick) {
-          if (mouseX > x && mouseX < canvas.width - radiusS - 5) {
-            x = mouseX + dx;
-          } else if (mouseX < x && mouseX > radiusS - 5) {
-            x = mouseX - dx;
-          } else {
-            x = x;
-          }
+    for (var k = 0; k < lightX.length; k++) {
+      new Circle(ctx, lightX[k], lightY[k], radiusL, "#fcba03", false, 0, null);
+    }
+    moveLight();
+    removeLightP();
+    checkCollide();
+  } else {
+    var mouseCoordsSlider = new CanvasMouseCoords(canvas)
+    if (insideCircle(mouseCoordsSlider, x, y, radiusS, 5)) {
+      color = "#3569a1";
+      sliderWidth = 5;
+      var dx = (x - mouseX)/60;
+      if (isClick) {
+        if (mouseX > x && mouseX < canvas.width - radiusS - 5) {
+          x = mouseX + dx;
+        } else if (mouseX < x && mouseX > radiusS - 5) {
+          x = mouseX - dx;
+        } else {
+          x = x;
         }
-      } else {
-        color = "#407fc2";
-        sliderWidth = 1;
       }
-      addCircles();
-      removeCircles();
+    } else {
+      color = "#407fc2";
+      sliderWidth = 1;
     }
+    addCircles();
+    removeCircles();
+  }
+
+  /*ctx1.beginPath();
+  ctx1.arc(50, 50, 10, 0, 2 * Math.PI);
+  ctx1.lineWidth = 1;
+  ctx1.stroke();
+  ctx1.fillStyle = "red";
+  ctx1.fill(); */
     
 }
 
