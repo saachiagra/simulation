@@ -3,6 +3,7 @@
     <title>Climate Change: A Simulation</title> 
 </head>
  <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <!--p align="center"> 
 	<This draws the Canvas on the webpage>
       <canvas id="mycanvas"></canvas> 
@@ -63,8 +64,10 @@
       This data consists of average temperature readings taken during the month of June, 
       and all the data points are in &deg;C. </p>
       <!--TODO: temperature sim-->
+      <canvas id="tempSim" style="width:70%;max-width:1000px;"></canvas>
+      <script src="tempSim.js"></script>
 
-      <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+      <!--<img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">-->
 
       <p>Let’s analyze the overarching trend of the graph. It looks like the temperature is generally
       increasing as time progresses, and we see a steady uptick in temperatures starting from 
@@ -136,5 +139,6 @@
  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
  <!--script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script-->
  <!--script src="simoutline.js"--><!--/script-->
+ 
  
 </html>
