@@ -59,6 +59,7 @@ var lightY = [];
 var lightVY = [];
 var startSim = false;
 
+
 //generates coordinates for 5 initial molecules
 for (var i = 0; i < 5; i++) {
   coordXArray[i] = Math.round(Math.random()*200 + 75);
@@ -66,8 +67,8 @@ for (var i = 0; i < 5; i++) {
 }
 
 //generating more molecule coordinates based on slider's position
-function addCircles() {
-  var add = Math.round(x/5) - coordXArray.length;
+function addCircles(input) {
+  var add = input - coordXArray.length;
   for (var i = 0; i < add; i++) {
     var getNew = false;
     var newX;
@@ -88,8 +89,8 @@ function addCircles() {
 }
 
 //removes molecule coordinates based on slider's position
-function removeCircles() {
-  var subtract = coordXArray.length - Math.round(x/5);
+function removeCircles(input) {
+  var subtract = coordXArray.length - input;
   for (var i = 0; i < subtract; i++) {
     coordXArray.pop();
     coordYArray.pop();
@@ -183,6 +184,12 @@ function reset() {
   startSim = false;
 }
 
+// formMS = document.getElementById("moleSel");
+// formMS.addEventListener("submit", (event) => {
+  
+//   event.preventDefault();
+// });
+
 var counter = 55;
 function animate() {
   requestAnimationFrame(animate);
@@ -191,11 +198,24 @@ function animate() {
   /*ctx.font = "20px Arial";
   ctx.fillStyle = "black";
   ctx.fillText("Temperature: " + x, 10, 50);*/
-  var ground = new Line(ctx, 0, y-25, 300, y-25, 3);
-  var sliderLine = new Line(ctx, 0, y, 300, y, 1.5);
-  var slider = new Circle(ctx, x, y, radiusS, color, true, sliderWidth, "black"); 
-  var coor = "Value: " + Math.round(x/5);
-  document.getElementById("demo").innerHTML = coor;
+  
+  // NOTE: REPLACING CANVAS SLIDER WITH HTML RANGE INPUT
+  // var ground = new Line(ctx, 0, y-25, 300, y-25, 3);
+  // var sliderLine = new Line(ctx, 0, y, 300, y, 1.5);
+  // var slider = new Circle(ctx, x, y, radiusS, color, true, sliderWidth, "black"); 
+  // var coor = "Value: " + Math.round(x/5);
+
+  if (document.getElementById("co2").checked) {
+    radiusC = 10;
+  } else if (document.getElementById("ch4").checked) {
+    radiusC = 15;
+  } else if (document.getElementById("n2o").checked) {
+    radiusC = 30;
+  }
+
+  var coor = document.getElementById("moleConc").value;
+  document.getElementById("getMoleNum").innerHTML = coor;
+
   for (var j = 0; j < coordXArray.length; j++) {
     new Circle(ctx, coordXArray[j], coordYArray[j], radiusC, "#505d6b", false, 0, null);
   }
@@ -230,8 +250,8 @@ function animate() {
       color = "#407fc2";
       sliderWidth = 1;
     }
-    addCircles();
-    removeCircles();
+    addCircles(coor);
+    removeCircles(coor);
   }
 
   /*ctx1.beginPath();

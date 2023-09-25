@@ -47,6 +47,23 @@ function Circle(contextNum, xPos, yPos, rad, fill, yesStroke=false, lineW=0, str
   contextNum.closePath();
 }
 
+function Ellipse(contextNum, xPos, yPos, radX, radY, fill, rotation=0, yesStroke=false, lineW=0, strokeColor=null, start=0, end=2*Math.PI, alpha=1) {
+  this.xPos = xPos;
+  this.yPos = yPos;
+  contextNum.globalAlpha = alpha;
+  contextNum.beginPath();
+  contextNum.moveTo(this.xPos, this.yPos);
+  contextNum.ellipse(this.xPos, this.yPos, radX, radY, rotation, start, end);
+  if (yesStroke) {
+    contextNum.lineWidth = lineW;
+    contextNum.strokeStyle = strokeColor;
+    contextNum.stroke();
+  }
+  contextNum.fillStyle = fill;
+  contextNum.fill();
+  contextNum.closePath();
+}
+
 function Rect(contextNum, xPos, yPos, w, h, fill, alpha=1) {
   this.xPos = xPos;
   this.yPos = yPos;

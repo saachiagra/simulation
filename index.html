@@ -90,13 +90,35 @@
     <canvas id="Canvas1" height="300"></canvas>
     <!--TEMPERATURE SIMULATION-->
     <script src="firstcanvas.js"></script>
+    <form id="tempSel">
+      <input type="radio" id="therm1" name="thermType" value="therm1" checked />
+      <label for="therm1">Thermometer #1</label>
+      <input type="radio" id="therm2" name="thermType" value="therm2" />
+      <label for="therm2">Thermometer #2</label>
+      <input type="radio" id="therm3" name="thermType" value="therm3" />
+      <label for="therm3">Thermometer #3</label>
+      <!-- <button type="submit">Choose Molecule</button> -->
+    </form>
     <p id="temp1"></p>
 
     <canvas id="Canvas2" height="300"></canvas>
     <script src="heatisland.js"></script>
-    <p id="demo"></p>
-    <button onclick="startLight()">Start</button>
-    <button onclick="reset()">Reset</button>
+    <br>
+    <form id="moleSel">
+      <input type="radio" id="co2" name="mole" value="co2" checked />
+      <label for="co2">CO2 (Carbon Dioxide)</label>
+      <input type="radio" id="ch4" name="mole" value="ch4" />
+      <label for="ch4">CH4 (Methane)</label>
+      <input type="radio" id="n2o" name="mole" value="n2o" />
+      <label for="n2o">N2O (Nitrous Oxide)</label>
+      <!-- <button type="submit">Choose Molecule</button> -->
+    </form>
+      <input type="range" id="moleConc" name="moleConc" min="5" max="100" value="5" step="1"/>
+      <label for="moleConc">Molecule Concentration: <output id="getMoleNum"></output></label>
+      <br>
+      <button onclick="startLight()">Start</button>
+      <button onclick="reset()">Reset</button>
+    
     <br>
 
     <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
