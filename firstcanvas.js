@@ -47,7 +47,91 @@ function toCelsius(num) {
 function animate_t() {
   requestAnimationFrame(animate_t);
   ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
-  
+
+  if (document.getElementById("therm1").checked) {
+    tempAnom = 0;
+    color_t1 = color_t2 = color_t3 = "red";
+  } else if (document.getElementById("therm2").checked) {
+    tempAnom = 5;
+    color_t1 = color_t2 = color_t3 = "cyan";
+  } else if (document.getElementById("therm3").checked) {
+    tempAnom = -5;
+    color_t1 = color_t2 = color_t3 = "blue";
+  }
+
+  var mouseCoordsCircle1 = new CanvasMouseCoords(canvas1);
+  //first circle
+  if (insideCircle(mouseCoordsCircle1, x_t1, y_t1, radius1, 0)) {
+    color_t1 = "dark" + color_t1;
+    sliderWidth_t1 = 8;
+    sliderColor_t1 = "#94908f";
+    //var dx = (x - mouseX)/60;
+    if (isClick) {
+      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
+        x_t1 = x_t1;
+      } else {
+        x_t1 = mouseCoordsCircle1.canvX;
+      }
+      if (mouseCoordsCircle1.canvY < radius1 || mouseCoordsCircle1.canvY > 100 - radius1) {
+        y_t1 = y_t1;
+      } else {
+        y_t1 = mouseCoordsCircle1.canvY;
+      }
+    }
+  } else {
+    color_t1 = color_t1;
+    sliderColor_t1 = "black";
+    sliderWidth_t1 = 1;
+  }
+
+  //second circle
+  if (insideCircle(mouseCoordsCircle1, x_t2, y_t2, radius1, 0)) {
+    color_t2 = "dark" + color_t2;
+    sliderWidth_t2 = 8;
+    sliderColor_t2 = "#94908f";
+    if (isClick) {
+      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
+        x_t2 = x_t2;
+      } else {
+        x_t2 = mouseCoordsCircle1.canvX;
+      }
+      if (mouseCoordsCircle1.canvY < 100 + radius1 || mouseCoordsCircle1.canvY > 200 - radius1) {
+        y_t2 = y_t2;
+      } else {
+        y_t2 = mouseCoordsCircle1.canvY;
+      }
+    }
+  } else {
+    color_t2 = color_t2;
+    sliderColor_t2 = "black";
+    sliderWidth_t2 = 1;
+  }
+
+  //third circle
+  if (insideCircle(mouseCoordsCircle1, x_t3, y_t3, radius1, 0)) {
+    color_t3 = "dark" + color_t3;
+    sliderWidth_t3 = 8;
+    sliderColor_t3 = "#94908f";
+    if (isClick) {
+      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
+        x_t3 = x_t3;
+      } else {
+        x_t3 = mouseCoordsCircle1.canvX;
+      }
+      if (mouseCoordsCircle1.canvY < 200 + radius1 || mouseCoordsCircle1.canvY > 300 - radius1) {
+        y_t3 = y_t3;
+      } else {
+        y_t3 = mouseCoordsCircle1.canvY;
+      }
+    }
+  } else {
+    color_t3 = color_t3;
+    sliderColor_t3 = "black";
+    sliderWidth_t3 = 1;
+  }
+
+  /* ------ GRAPHICS STUFF ------ */
+
   //sun
   var temp_sun_glow = new Circle(ctx1, 0, 101, sunGlowRad, "#fcba03", false, 0, null, 0, 0.5*Math.PI, alphaSunGlow);
   if (sunGlowRad < 40) {
@@ -79,93 +163,13 @@ function animate_t() {
   let build3 = new Rect(ctx1, 204, 251, 28, 50, "#565656");
   let build4 = new Rect(ctx1, 248, 264, 50, 45, "#c4c4c4");
   
+  //actually drawing circles
   var circle_t1 = new Circle(ctx1, x_t1, y_t1, radius1, color_t1, true, sliderWidth_t1, sliderColor_t1);
   var circle_t2 = new Circle(ctx1, x_t2, y_t2, radius1, color_t2, true, sliderWidth_t2, sliderColor_t2);
   var circle_t3 = new Circle(ctx1, x_t3, y_t3, radius1, color_t3, true, sliderWidth_t3, sliderColor_t3);
 
   new Line(ctx1, 0, 100, 300, 100, 1.5);
   new Line(ctx1, 0, 200, 300, 200, 1.5);
-
-  var mouseCoordsCircle1 = new CanvasMouseCoords(canvas1);
-  //first circle
-  if (insideCircle(mouseCoordsCircle1, x_t1, y_t1, radius1, 0)) {
-    sliderWidth_t1 = 8;
-    sliderColor_t1 = "#94908f";
-    statement = "yes";
-    //var dx = (x - mouseX)/60;
-    if (isClick) {
-      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
-        x_t1 = x_t1;
-      } else {
-        x_t1 = mouseCoordsCircle1.canvX;
-      }
-      if (mouseCoordsCircle1.canvY < radius1 || mouseCoordsCircle1.canvY > 100 - radius1) {
-        y_t1 = y_t1;
-      } else {
-        y_t1 = mouseCoordsCircle1.canvY;
-      }
-    }
-  } else {
-    if (document.getElementById("therm1").checked) {
-      tempAnom = 0;
-      color_t1 = "red";
-    } else if (document.getElementById("therm2").checked) {
-      tempAnom = 5;
-      color_t1 = "yellow";
-    } else if (document.getElementById("therm3").checked) {
-      tempAnom = -5;
-      color_t1 = "blue";
-    }
-    sliderColor_t1 = "black";
-    sliderWidth_t1 = 1;
-    statement = "no";
-  }
-
-  
-
-  //second circle
-  if (insideCircle(mouseCoordsCircle1, x_t2, y_t2, radius1, 0)) {
-    sliderWidth_t2 = 8;
-    sliderColor_t2 = "#94908f";
-    if (isClick) {
-      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
-        x_t2 = x_t2;
-      } else {
-        x_t2 = mouseCoordsCircle1.canvX;
-      }
-      if (mouseCoordsCircle1.canvY < 100 + radius1 || mouseCoordsCircle1.canvY > 200 - radius1) {
-        y_t2 = y_t2;
-      } else {
-        y_t2 = mouseCoordsCircle1.canvY;
-      }
-    }
-  } else {
-    color_t2 = "red";
-    sliderColor_t2 = "black";
-    sliderWidth_t2 = 1;
-  }
-
-  //third circle
-  if (insideCircle(mouseCoordsCircle1, x_t3, y_t3, radius1, 0)) {
-    sliderWidth_t3 = 8;
-    sliderColor_t3 = "#94908f";
-    if (isClick) {
-      if (mouseCoordsCircle1.canvX < radius1 || mouseCoordsCircle1.canvX > 300 - radius1) {
-        x_t3 = x_t3;
-      } else {
-        x_t3 = mouseCoordsCircle1.canvX;
-      }
-      if (mouseCoordsCircle1.canvY < 200 + radius1 || mouseCoordsCircle1.canvY > 300 - radius1) {
-        y_t3 = y_t3;
-      } else {
-        y_t3 = mouseCoordsCircle1.canvY;
-      }
-    }
-  } else {
-    color_t3 = "red";
-    sliderColor_t3 = "black";
-    sliderWidth_t3 = 1;
-  }
 
   document.getElementById("temp1").innerHTML = "Temperature: " + calcTemp().toString() + "\xB0" + "F<br>Conversion: " + toCelsius(calcTemp()).toString() + "\xB0" + "C";
 

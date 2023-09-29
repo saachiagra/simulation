@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1em;
+}
+
+figcaption {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+section {
+    background-color: lightgray;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+input {
+    display: block;
+}
+
+canvas[id="tempSim"] {
+    max-width: 700px;
+    margin: auto;
+}
+
+canvas {
+    /* border: 10px solid purple; */
+    width: 300px;
+    margin: 10px;
+    background-color: white;
+}
+
+div[id="menu"] {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* border: 10px solid red; */
+}
+
+div[id="menu"] > p {
+    margin: 10px 0;
+}
+
+label {
+    display: flex;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    max-width: 700px;
+}
