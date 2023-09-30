@@ -208,9 +208,9 @@ function animate() {
   if (document.getElementById("co2").checked) {
     radiusC = 10;
   } else if (document.getElementById("ch4").checked) {
-    radiusC = 15;
+    radiusC = 20;
   } else if (document.getElementById("n2o").checked) {
-    radiusC = 30;
+    radiusC = 50;
   }
 
   var coor = document.getElementById("moleConc").value;

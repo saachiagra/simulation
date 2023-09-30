@@ -111,7 +111,15 @@
     out data points (17)(18). The math behind these standardizations is pretty complex, but the overall 
     process is strategically minimizing any abnormal variations that have arisen from data collection 
     methods to ensure the data accurately portrays a region’s characteristics.</p>
-    <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+    <section>
+      <canvas id="standardize" height="300"></canvas>
+      <script src="standardizing.js"></script>
+      <div id="menu">
+        <p id="testing"></p>
+        <p id="equation"></p>
+        <button onclick="resetDataPoints()">Reset</button>
+      </div>
+    </section>
     <p>Let’s look at the graph again.</p>
     <canvas id="tempSim2"></canvas>
     <p>You should notice that some of the data entries are negative and some are positive, and all 

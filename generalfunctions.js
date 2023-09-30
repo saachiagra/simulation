@@ -19,12 +19,13 @@ window.addEventListener('mousemove',
 );
 
 //add smth for line color?
-function Line(contextNum, x1, y1, x2, y2, lineW) {
+function Line(contextNum, x1, y1, x2, y2, lineW, color="black", alpha=1) {
+  contextNum.globalAlpha = alpha;
   contextNum.beginPath();
   contextNum.moveTo(x1, y1);
   contextNum.lineTo(x2, y2);
   contextNum.lineWidth = lineW;
-  contextNum.strokeStyle = "black";
+  contextNum.strokeStyle = color;
   contextNum.stroke();
 }
 
@@ -33,6 +34,7 @@ function Circle(contextNum, xPos, yPos, rad, fill, yesStroke=false, lineW=0, str
   this.xPos = xPos;
   this.yPos = yPos;
   this.radius = rad;
+  this.color = fill;
   contextNum.globalAlpha = alpha;
   contextNum.beginPath();
   contextNum.moveTo(this.xPos, this.yPos);
