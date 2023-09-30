@@ -3,6 +3,7 @@
     <title>Climate Change: A Simulation</title>
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 </head>
  <body>
     <h1>Climate Change: A Simulation</h1>
@@ -18,7 +19,16 @@
       <p>Natural disasters have always been a part of weather phenomena, but lately,
       the number and severity of these events seemed to have increased tremendously.
       But wait, before you cite the two c-words as the source of this calamity,
-      let’s step back and talk about weather. </p>
+      let’s step back…</p>
+    
+    <h2>Guide to this Website</h2>
+      <p>[insert more things]</p>
+      <p>A '<span ONMOUSEOVER="document.getElementById('rabbitHole0').style.display='block'">&#128007;</span>'
+      denotes a "rabbit hole." Hover your cursor over the rabbit icon to see some more information that I stumbled upon while researching
+      and thought was interesting!</p>
+      <div id="rabbitHole0" style="display:none">Here, you will see another '<a href="https://www.climate.gov/" target="_blank">&#128007;</a>' that will take you to another 
+      webpage when clicked!<br>Click anywhere else within the dashed border to close this section.</div>
+
 
     <h2>Weather</h2>
       <p>Weather, defined by the National Centers for Environmental Information,
@@ -68,12 +78,18 @@
       and contraction of a liquid, which was independent of barometric pressure” (3). </p>
       <p>The first set of continuous temperature readings from thermometers comes from the 
       Central England Temperature Data Series, which started in 1659 (4). Though, we don’t have 
-      substantial data on global temperatures before the 1880s. </p>
+      substantial data <span ONMOUSEOVER="document.getElementById('rabbitHole1').style.display='block'">&#128007;</span> on global temperatures before the 1880s. </p>
+      <div id="rabbitHole1" style="display:none">We may not have adequate thermometer readings from before, but there are other methods scientists use to calculate premodern temperatures!
+      <br>Tree rings: <a href="https://climate.nasa.gov/news/2540/tree-rings-provide-snapshots-of-earths-past-climate/" target="_blank">&#128007;</a>
+      <br>Pollen: <a href="https://www.ncei.noaa.gov/news/how-can-pollen-teach-us-about-climate" target="_blank">&#128007;</a></div>
       <p>Before digitalized thermometers, scientists typically used thermometers that contained some liquid
       -- often mercury -- within glass (15). However, there were other types of thermometers, such as
-      thermistors, that scientists used for weather reports (15). Although liquid thermometers and
+      thermistors<span ONMOUSEOVER="document.getElementById('rabbitHole2').style.display='block'">&#128007;</span>, 
+      that scientists used for weather reports (15). Although liquid thermometers and
       thermistors would both theoretically measure the same temperature, they both do so using different
       processes, so there’s a valid question on how temperature data can be affected by this variation.</p>
+      <div id="rabbitHole2" style="display:none">More information about thermistors (might be interesting 
+      if you've taken an electronics or physics class): <a href="https://www.teamwavelength.com/thermistor-basics/" target="_blank">&#128007;</a></div>
       <p>There are also different processes and methodologies that were used to collect temperature data. 
       Some thermometers were contained in Cotton Region Shelters, little wooden boxes that would shade the 
       device (15). Other thermometers were exposed to direct sunlight. Different weather stations also 
@@ -105,12 +121,16 @@
     
     <p>So it looks like temperature data can get skewed by the type of thermometer used and the location 
     of the device in relation to sunlight and urban spaces. </p>
+    <div id="rabbitHole3" style="display:none">This is the same link as the citation, but this article explains the standardizing process
+    in a simple, easy-to-read manner (highly recommend checking it out)! <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data" target="_blank">&#128007;</a></div>
     <p>However, scientists have accounted for these variations after collecting weather station data and 
     before making climate modules. This consideration can involve combing through data to find 
     inconsistencies, such as unnatural spikes in temperature readings, or creating algorithms to smooth 
-    out data points (17)(18). The math behind these standardizations is pretty complex, but the overall 
+    out data points (17)(18)<span ONMOUSEOVER="document.getElementById('rabbitHole3').style.display='block'">&#128007;</span>. The math behind these standardizations <span ONMOUSEOVER="document.getElementById('rabbitHole4').style.display='block'">&#128007;</span> is pretty complex, but the overall 
     process is strategically minimizing any abnormal variations that have arisen from data collection 
     methods to ensure the data accurately portrays a region’s characteristics.</p>
+    <div id="rabbitHole4" style="display:none">This link has some information about standardizing. If you click on the yellow 
+    binoculars icon, you can explore the several interactive graphs the EPA has created! <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature" target="_blank">&#128007;</a></div>
     <section>
       <canvas id="standardize" height="300"></canvas>
       <script src="standardizing.js"></script>
@@ -195,7 +215,10 @@
     <p>Although we see rising CO2 levels in terms of ppm, the concentration of measured 14C has actually 
     been decreasing over the past decade or so (10). Air samples from the terrestrial biosphere, ocean, 
     and general atmosphere -- which are all considered carbon sinks -- have similar 14C concentration values, 
-    so carbon released from these sources won’t affect the ratio of 14C within the air (9)(10). </p>
+    so carbon released from these sources won’t affect the ratio of 14C within the air 
+    <span ONMOUSEOVER="document.getElementById('rabbitHole5').style.display='block'">&#128007;</span> (9)(10). </p>
+    <div id="rabbitHole5" style="display:none">To calculate the ratio between different isotopes within a sample, 
+    scientists use delta values: <a href="https://gml.noaa.gov/ccgg/isotopes/deltavalues.html" target="_blank">&#128007;</a></div>
     <p>However, we do know that fossil fuels don’t have 14C because any 14C atom within the original ancient 
     plant would have decayed by the present day (8). So burning fossil fuels, which contain a significant 
     concentration of 12C, is changing the composition of the atmosphere!</p>
@@ -206,9 +229,12 @@
     <p>The Industrial Revolution began in Britain and later came to other now-first-world countries such 
     as the US. This era revolutionized people’s lives through the number of new developments people now 
     had access to, including forms of transportation and electricity. Subsequently, the demand and usage 
-    for fossil fuels dramatically increased around the 1950s due to more people purchasing cars, using 
-    electricity, and manufacturing steel products (13). Ever since, we across the globe have still been 
-    mostly using fossil fuels to power our homes, cars, and our lifestyles.</p>
+    for fossil fuels dramatically increased around the 1950s <span ONMOUSEOVER="document.getElementById('rabbitHole6').style.display='block'">&#128007;</span> 
+    due to more people purchasing cars, using electricity, and manufacturing steel products (13). 
+    Ever since, we across the globe have still been mostly using fossil fuels to power our homes, cars, and our lifestyles.</p>
+    <div id="rabbitHole6" style="display:none">I haven't been able to find something as of now, but I wonder if there's 
+    a link between the decolonization of Africa &amp; Asia and this uptick in fossil fuel consumption around the 1950s.
+    <br>If you find something, please let me know!</div>
     <figure>
       <img src="fossilfuels&temps.svg" alt="a graph depicting different temperature-increasing phenomenon and 
       an increase of global temperatures" width="70%" max-width="700px">
