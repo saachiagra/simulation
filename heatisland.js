@@ -88,6 +88,7 @@ function addCircles(input) {
   }
 }
 
+//TODO: UPDATE THIS!!!
 //removes molecule coordinates based on slider's position
 function removeCircles(input) {
   var subtract = coordXArray.length - input;

@@ -144,7 +144,6 @@
         <br>However, this data set has some clear outliers interfering with the line's approximation. Remove the outliers by clicking on those data points.
         <br>Your goal is to get the R^squared value as close to 1.0 (meaning the line is a very good representation of the data point relationships) as possible. 
         <br>Click the "Reset" button to go back to the original data set.</p>
-        <p id="testing"></p>
         <p id="equation"></p>
         <button onclick="resetDataPoints()">Reset</button>
       </div>
@@ -225,7 +224,23 @@
     stable, 14C is radioactive <a href="#sources">(6)</a>. This means that over time, 14C will turn into 14N through the process 
     of beta minus decay. Essentially, a neutron within the carbon atom transforms into a proton, releasing 
     an electron and an antineutrino in the process <a href="#sources">(5)</a>. </p>
-    <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+    <p>Although 12C is definitely the most abundant compared to its larger isotope counterparts, the concentrations of 
+    12C compared to 13C and 14C vary within different materials and organisms. Below is a simulation that helps
+    demonstrate the slight ratio discrepancies within some compounds: </p>
+    
+    <section>
+      <canvas id="isotope" height="300"></canvas>
+      <script src="isotope.js"></script>
+      <div id="menu">
+        <p>The moving circles on the left represent different carbon isotopes. Move the black square around to see 
+        the different carbon isotope concentrations within the atmosphere, plants, and fossil fuels!
+        <br>(You'll have to pay close attention to the percentage changes; they are slight but still noticable!)
+        </p>
+        <p id="carbonConc"></p>
+        <p>If you play with this simulation long enough, you may see a legendary green 14C atom! :)</p>
+      </div>
+    </section>
+
     <p>Although we see rising CO2 levels in terms of ppm, the concentration of measured 14C has actually 
     been decreasing over the past decade or so <a href="#sources">(10)</a>. Air samples from the terrestrial biosphere, ocean, 
     and general atmosphere -- which are all considered carbon sinks -- have similar 14C concentration values, 

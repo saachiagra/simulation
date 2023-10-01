@@ -66,15 +66,34 @@ function Ellipse(contextNum, xPos, yPos, radX, radY, fill, rotation=0, yesStroke
   contextNum.closePath();
 }
 
-function Rect(contextNum, xPos, yPos, w, h, fill, alpha=1) {
+function Rect(contextNum, xPos, yPos, w, h, fill, yesStroke=false, lineW=0, strokeColor=null, alpha=1) {
   this.xPos = xPos;
   this.yPos = yPos;
   contextNum.globalAlpha = alpha;
   contextNum.beginPath();
   contextNum.rect(this.xPos, this.yPos, w, h);
+  if (yesStroke) {
+    contextNum.lineWidth = lineW;
+    contextNum.strokeStyle = strokeColor;
+    contextNum.stroke();
+  }
   contextNum.fillStyle = fill;
   contextNum.fill();
   contextNum.closePath();
+}
+
+function Polygon(contextNum, coorArray, fill, alpha=1) {
+  contextNum.globalAlpha = alpha;
+  contextNum.beginPath();
+  contextNum.moveTo(coorArray[0], coorArray[1]);
+  for(let i = 2; i < coorArray.length-1; i += 2 ){
+    contextNum.lineTo(coorArray[i] , coorArray[i+1] )
+  }
+  contextNum.fillStyle = fill;
+  contextNum.fill();
+  contextNum.closePath();
+  contextNum.closePath();
+  // contextNum.stroke();
 }
 
 function getDistance(x1, x2, y1, y2) {
@@ -91,6 +110,19 @@ function CanvasMouseCoords(canvasNum) {
 //returns boolean based on if mouse coordinates are inside circle
 function insideCircle(cmc, xPos, yPos, rad, marginOfError) {
   return (getDistance(cmc.canvX, xPos, cmc.canvY, yPos)) < (rad + marginOfError);
+}
+
+function insideRect(cmc, x1, y1, w, h, marginOfError) {
+  return (cmc.canvX > (x1-marginOfError/2) && cmc.canvX < (x1+w+marginOfError/2)) && (cmc.canvY > (y1-marginOfError/2) && cmc.canvY < (y1+h+marginOfError/2));
+}
+
+
+function getRandom(max, min) {
+  return Math.floor(Math.random()*(Math.abs(max) + Math.abs(min)) + min);
+}
+
+function getRandomNoRound(max, min) {
+  return Math.random()*(Math.abs(max) + Math.abs(min)) + min;
 }
 
 //closes rabbit hole div if clicked on
