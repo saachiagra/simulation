@@ -95,8 +95,7 @@ function insideCircle(cmc, xPos, yPos, rad, marginOfError) {
 
 //closes rabbit hole div if clicked on
 $(document).ready(function(){
-  $("div[id*='rabbitHole']")
   $("div[id*='rabbitHole']").click(function(){
-      $("div[id*='rabbitHole']").hide();
+      $(this).hide();
   });
 });
