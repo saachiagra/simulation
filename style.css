@@ -1,9 +1,37 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#opening {
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+canvas#openingBackground {
+    height: 100%;
+    width: 100%;
+    background-color: dimgray;
+    z-index: -1;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    font-size: 3em;
+    /* z-index: 1;
+    position: absolute;
+    line-height: 150px; */
 }
 
 h1, h2, h3 {
     text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    text-transform: uppercase;
+    margin: 20px 0;
 }
 
 p {
@@ -13,10 +41,11 @@ p {
     margin-bottom: 15px;
     text-align: justify;
     font-size: 1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 li {
-    width: 83%;
+    width: 77%;
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -24,11 +53,26 @@ li {
     font-size: 1em;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    /* color: #73d802; */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    /* color: #4c8e06; */
+}
+
 figcaption {
     width: 70%;
     margin: auto;
     text-align: center;
     font-size: 0.85em;
+    font-family: 'Times New Roman', serif;
 }
 
 section {
@@ -53,6 +97,7 @@ canvas {
     width: 300px;
     margin: 10px;
     background-color: white;
+    cursor: pointer;
 }
 
 div[id="menu"] {
@@ -67,6 +112,7 @@ div[id="menu"] {
 div[id="menu"] > p {
     margin: 10px 0;
     text-align: left;
+    font-family: 'Times New Roman', serif;
 }
 
 label {

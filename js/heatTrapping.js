@@ -62,7 +62,7 @@ var startSim = false;
 
 //generates coordinates for 5 initial molecules
 for (var i = 0; i < 5; i++) {
-  coordXArray[i] = Math.round(Math.random()*200 + 75);
+  coordXArray[i] = Math.round(Math.random()*220 + 75);
   coordYArray[i] = Math.round(Math.random()*50 + 87);
 }
 
@@ -74,7 +74,7 @@ function addCircles(input) {
     var newX;
     var newY;
     do {
-      newX = Math.round(Math.random()*200 + 75);
+      newX = Math.round(Math.random()*220 + 75);
       newY = Math.round(Math.random()*50 + 87);
       for (var j = 0; j < lightX.length; j++) {
         if (Math.sqrt(Math.pow(lightX[i] - coordXArray[j], 2) + Math.pow(lightY[i] - coordYArray[j], 2)) < (radiusL + radiusS)) {
@@ -103,7 +103,7 @@ function moveLight() {
   for (var a = 0; a < lightX.length; a++) {
     lightX[a] += lightVX[a];
     lightY[a] += lightVY[a];
-    if (lightX[a] + radiusL > 300) {
+    if (lightX[a] + radiusL > 300 || lightX[a] - radiusL < 0) {
       lightVX[a] = -lightVX[a];
     } 
      if (lightY[a] + radiusL > 250) {
@@ -183,6 +183,10 @@ function startLight() {
 
 function reset() {
   startSim = false;
+  lightX = [];
+  lightVX = [];
+  lightY = [];
+  lightVY = [];
 }
 
 // formMS = document.getElementById("moleSel");
@@ -205,6 +209,8 @@ function animate() {
   // var sliderLine = new Line(ctx, 0, y, 300, y, 1.5);
   // var slider = new Circle(ctx, x, y, radiusS, color, true, sliderWidth, "black"); 
   // var coor = "Value: " + Math.round(x/5);
+
+  var ground = new Rect(ctx, 0, 250, 300, 50, "darkgreen");
 
   if (document.getElementById("co2").checked) {
     radiusC = 10;

@@ -152,7 +152,7 @@ function animate_t() {
   var tree_leaves3 = new Circle(ctx1, 230, 142, 19, "#099209", false, 0, null);
   var tree_leaves4 = new Circle(ctx1, 238, 120, 17, "#7cba34", false, 0, null);
 
-  var shadow = new Rect(ctx1, 255, 100, 50, 100, "gray", 0.4);
+  var shadow = new Rect(ctx1, 255, 100, 50, 100, "gray", false, 0, null, 0.4);
 
   var ground1 = new Circle (ctx1, 12, 302, 60, "green", false, 0, null);
   var ground2 = new Circle(ctx1, 0, 517, 250,"#7cba34", false, 0, null, end=0.5*Math.PI);

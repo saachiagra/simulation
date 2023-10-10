@@ -4,10 +4,17 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@300&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
  <body>
-    <h1>Climate Change: A Simulation</h1>
-    <script src="generalfunctions.js"></script>
+    <!-- <div id="opening">
+      <canvas id="openingBackground"></canvas> -->
+      <h1>Climate Change: A Simulation</h1>
+    <!-- </div> -->
+    
+    <script src="js/generalfunctions.js"></script>
     
     <h2>Introduction</h2>
       <!--TODO: put images here-->
@@ -63,9 +70,9 @@
       
       <canvas id="tempSim"></canvas>
       <!--ABOVE FORMATTING IS: style="width:70%;max-width:1000px;"-->
-      <script src="tempSim.js"></script>
+      <script src="js/tempSim.js"></script>
 
-      <!--<img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">-->
+      <!--<img src="img/comingsoon.jpg" alt="more features and info coming soon!!" width="400px">-->
 
       <p>Let’s analyze the overarching trend of the graph. It looks like the temperature is generally
       increasing as time progresses, and we see a steady uptick in temperatures starting from 
@@ -110,7 +117,7 @@
     <section>
       <canvas id="Canvas1" height="300"></canvas>
       <!--TEMPERATURE SIMULATION-->
-      <script src="firstcanvas.js"></script>
+      <script src="js/tempVariables.js"></script>
       <div id="menu">
         <p>The red dots on the left represent thermometers in a specific location. Move around the thermometers around to see how its temperature reading can change!
         <br> You can also change the type of thermometer using the selections below:
@@ -138,7 +145,7 @@
     binoculars icon, you can explore the several interactive graphs the EPA has created! <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature" target="_blank">&#128007;</a></div>
     <section>
       <canvas id="standardize" height="300"></canvas>
-      <script src="standardizing.js"></script>
+      <script src="js/standardizing.js"></script>
       <div id="menu">
         <p>This graph is an example of a linear regression: using a best-fit line to approximate the trend of discrete data points.
         <br>However, this data set has some clear outliers interfering with the line's approximation. Remove the outliers by clicking on those data points.
@@ -150,7 +157,7 @@
     </section>
     <p>Let’s look at the graph again.</p>
     <canvas id="tempSim2"></canvas>
-    <script src="tempSim2.js"></script>
+    <script src="js/tempSim2.js"></script>
     <p>You should notice that some of the data entries are negative and some are positive, and all 
     the points range from -1 &deg;C to 1.5 &deg;C. This is because these data points are measuring 
     anomalies from a standard formed from the average temperature over the 20th century, 1901 to 2000. 
@@ -162,12 +169,14 @@
     and succeeding 1909, we can see that the early 1900s were typically cooler than the present day. </p>
     <p>Though after all these adjustments, there still seems to be a steady increase in temperatures by around 1&deg;C. 
     So what could be causing this uptick?</p>
+  
+  <h2>Gases</h2>
     <p>One cause of temperature changes is based on the chemical composition of the atmosphere. There are 
     certain gases, such as carbon dioxide and methane, that effectively traps heat within the surface 
     and lower atmospheric levels. Below is a simulation that demonstrates that trapping: </p>
     <section>
       <canvas id="Canvas2" height="300"></canvas>
-      <script src="heatisland.js"></script>
+      <script src="js/heatTrapping.js"></script>
       <div id="menu">
         <p>SEIZURE WARNING: Maybe don't interact with this simulation if you are prone to epileptic seizures!
         <br>Choose the type of molecule you want to observe using the selections below. You can also determine the number of molecules on the screen using the slider.
@@ -198,7 +207,7 @@
     carefully taking air samples from a layer allows scientists to determine the atmospheric composition 
     of a long time ago. In fact, air samples from 800 thousand years ago have been recovered!</p>
     <figure>
-      <img src="icecoreCO2.png" alt="graph, shows co2 levels oscillating between 170 and 250 ppm, but 
+      <img src="img/icecoreCO2.png" alt="graph, shows co2 levels oscillating between 170 and 250 ppm, but 
       modern data shows a huge uptick in co2 levels, reaching over 400 ppm today">
       <figcaption>Atmospheric carbon dioxide (CO2) in parts per million (ppm) for the past 800,000 years 
       based on ice-core data (light purple line) compared to 2022 concentration (bright purple dot). 
@@ -230,7 +239,7 @@
     
     <section>
       <canvas id="isotope" height="300"></canvas>
-      <script src="isotope.js"></script>
+      <script src="js/isotope.js"></script>
       <div id="menu">
         <p>The moving circles on the left represent different carbon isotopes. Move the black square around to see 
         the different carbon isotope concentrations within the atmosphere, plants, and fossil fuels!
@@ -265,7 +274,7 @@
     a link between the decolonization of Africa &amp; Asia and this uptick in fossil fuel consumption around the 1950s.
     <br>If you find something, please let me know!</div>
     <figure>
-      <img src="fossilfuels&temps.svg" alt="a graph depicting different temperature-increasing phenomenon and 
+      <img src="img/fossilfuels&temps.svg" alt="a graph depicting different temperature-increasing phenomenon and 
       an increase of global temperatures" width="70%" max-width="700px">
       <figcaption>By <a href="//commons.wikimedia.org/w/index.php?" title="User:Efbrazil&action=edit&redlink=1" class="new" title="User:Efbrazil (page does not exist)">Efbrazil</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=113363595">Link</a></caption>
     </figure>
@@ -293,7 +302,7 @@
     Natural disasters will only become more harsh and extreme, putting more people in danger and at risk 
     for calamities.</p>
     <p>So…now what? Is there anything realistic that we can do to solve this problem?</p>
-    <img src="comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
+    <img src="img/comingsoon.jpg" alt="more features and info coming soon!!" width="400px">
   <h2>Author's Note and Credits</h2>
     <p>Hopefully, this walkthrough helped to solidify your understanding of 
     the complex phenomenon that is climate change and also pique your interest in this area! I, 
@@ -324,13 +333,13 @@
       <li>How do weather observations become climate data? (n.d.) Climate.gov. <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data">https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data</a>.</li>
       <li>What is the Carbon Cycle? (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://oceanservice.noaa.gov/facts/carbon-cycle.html">https://oceanservice.noaa.gov/facts/carbon-cycle.html</a>.</li>
     </ol>
-    <h3>Additional Websites for Further Reading:</h3>
+    <h2>Additional Websites for Further Reading:</h2>
     <ul>
       <li><a href="https://en.wikipedia.org/wiki/Global_temperature_record#/media/File:20200324_Global_average_temperature_-_NASA-GISS_HadCrut_NOAA_Japan_BerkeleyE.svg">https://en.wikipedia.org/wiki/Global_temperature_record#/media/File:20200324_Global_average_temperature_-_NASA-GISS_HadCrut_NOAA_Japan_BerkeleyE.svg</a></li>
       <li><a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global">https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global</a></li>
       <li><a href="https://sitn.hms.harvard.edu/flash/2014/earth-climate-tipping-point/">https://sitn.hms.harvard.edu/flash/2014/earth-climate-tipping-point/</a></li>
       <li><a href="https://climate.nasa.gov/explore/ask-nasa-climate/3071/the-raw-truth-on-global-temperature-records/">https://climate.nasa.gov/explore/ask-nasa-climate/3071/the-raw-truth-on-global-temperature-records/</a></li>
-      <li><a href="https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880"></a>https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880</li>
+      <li><a href="https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880">https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880</a></li>
       <li><a href="https://aerospaceamerica.aiaa.org/features/taking-the-temperature-on-temperature/">https://aerospaceamerica.aiaa.org/features/taking-the-temperature-on-temperature/</a></li>
       <li><a href="https://www.bas.ac.uk/data/our-data/publication/ice-cores-and-climate-change/">https://www.bas.ac.uk/data/our-data/publication/ice-cores-and-climate-change/</a></li>
       <li><a href="https://www.ncei.noaa.gov/products/paleoclimatology/ice-core">https://www.ncei.noaa.gov/products/paleoclimatology/ice-core</a></li>
