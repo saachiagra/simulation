@@ -2,6 +2,7 @@
 var isClick = false;
 var mouseX = undefined;
 var mouseY = undefined;
+let openRabbit = false;
 
 window.addEventListener('mousedown', 
   function(event) {
@@ -127,7 +128,16 @@ function getRandomNoRound(max, min) {
 
 //closes rabbit hole div if clicked on
 $(document).ready(function(){
+  $("span[id*='rb']").mouseover(function(){
+    if (!openRabbit) {
+      let id = "#rabbitHole" + $(this).attr("id")[2].toString();
+      $(id).css("display", "block");
+      openRabbit = true;
+    }
+  });
+
   $("div[id*='rabbitHole']").click(function(){
       $(this).hide();
+      openRabbit = false;
   });
 });

@@ -1,6 +1,11 @@
 <html> 
  <head>
     <title>Climate Change: A Simulation</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Climate Change Research Guidethrough">
+    <meta name="keywords" content="climate change, playable simulation">
+    <meta name="author" content="Saachi Agrawal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -30,12 +35,12 @@
     
     <h2>Quick Guide to this Website</h2>
       <p>Numbers within parentheses&#8212;something like <a href="#sources">(13)</a>&#8212;correspond to the numbered sources at the bottom of the page.</p>
-      <p>A '<span ONMOUSEOVER="document.getElementById('rabbitHole0').style.display='block'">&#128007;</span>'
+      <p>A '<span id = "rb0">&#128007;</span>'
       denotes a "rabbit hole." Hover your cursor over the rabbit icon to see some more information that I stumbled upon while researching
       and thought was interesting!</p>
       <p>There are a few interactive simulations within this website to help solidify your understanding of the discussed topic. 
       Please, check them out and play around with them!</p>
-      <div id="rabbitHole0" style="display:none">Here, you will see another '<a href="https://www.climate.gov/" target="_blank">&#128007;</a>' that will take you to another 
+      <div id="rabbitHole0">Here, you will see another '<a href="https://www.climate.gov/" target="_blank">&#128007;</a>' that will take you to another 
       webpage when clicked!<br>Click anywhere else within the dashed border to close this section.</div>
       <p>Now, onto discussing the weather!</p>
 
@@ -88,17 +93,17 @@
       and contraction of a liquid, which was independent of barometric pressure” <a href="#sources">(3)</a>. </p>
       <p>The first set of continuous temperature readings from thermometers comes from the 
       Central England Temperature Data Series, which started in 1659 <a href="#sources">(4)</a>. Though, we don’t have 
-      substantial data <span ONMOUSEOVER="document.getElementById('rabbitHole1').style.display='block'">&#128007;</span> on global temperatures before the 1880s. </p>
-      <div id="rabbitHole1" style="display:none">We may not have adequate thermometer readings from before, but there are other methods scientists use to calculate premodern temperatures!
+      substantial data <span id = "rb1">&#128007;</span> on global temperatures before the 1880s. </p>
+      <div id="rabbitHole1">We may not have adequate thermometer readings from before, but there are other methods scientists use to calculate premodern temperatures!
       <br>Tree rings: <a href="https://climate.nasa.gov/news/2540/tree-rings-provide-snapshots-of-earths-past-climate/" target="_blank">&#128007;</a>
       <br>Pollen: <a href="https://www.ncei.noaa.gov/news/how-can-pollen-teach-us-about-climate" target="_blank">&#128007;</a></div>
       <p>Before digitalized thermometers, scientists typically used thermometers that contained some liquid
       -- often mercury -- within glass <a href="#sources">(15)</a>. However, there were other types of thermometers, such as
-      thermistors<span ONMOUSEOVER="document.getElementById('rabbitHole2').style.display='block'">&#128007;</span>, 
+      thermistors<span id = "rb2">&#128007;</span>, 
       that scientists used for weather reports (15). Although liquid thermometers and
       thermistors would both theoretically measure the same temperature, they both do so using different
       processes, so there’s a valid question on how temperature data can be affected by this variation.</p>
-      <div id="rabbitHole2" style="display:none">More information about thermistors (might be interesting 
+      <div id="rabbitHole2">More information about thermistors (might be interesting 
       if you've taken an electronics or physics class): <a href="https://www.teamwavelength.com/thermistor-basics/" target="_blank">&#128007;</a></div>
       <p>There are also different processes and methodologies that were used to collect temperature data. 
       Some thermometers were contained in Cotton Region Shelters, little wooden boxes that would shade the 
@@ -133,15 +138,16 @@
     
     <p>So it looks like temperature data can get skewed by the type of thermometer used and the location 
     of the device in relation to sunlight and urban spaces. </p>
-    <div id="rabbitHole3" style="display:none">This is the same link as the citation, but this article explains the standardizing process
+    <div id="rabbitHole3">This is the same link as the citation, but this article explains the standardizing process
     in a simple, easy-to-read manner (highly recommend checking it out)! <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data" target="_blank">&#128007;</a></div>
     <p>However, scientists have accounted for these variations after collecting weather station data and 
     before making climate modules. This consideration can involve combing through data to find 
     inconsistencies, such as unnatural spikes in temperature readings, or creating algorithms to smooth 
-    out data points <a href="#sources">(17)</a><a href="#sources">(18)</a><span ONMOUSEOVER="document.getElementById('rabbitHole3').style.display='block'">&#128007;</span>. The math behind these standardizations <span ONMOUSEOVER="document.getElementById('rabbitHole4').style.display='block'">&#128007;</span> is pretty complex, but the overall 
+    out data points <a href="#sources">(17)</a><a href="#sources">(18)</a><span id = "rb3">&#128007;</span>. 
+    The math behind these standardizations <span id = "rb4">&#128007;</span> is pretty complex, but the overall 
     process is strategically minimizing any abnormal variations that have arisen from data collection 
     methods to ensure the data accurately portrays a region’s characteristics. Below is a very simple demonstration of how scientists standardize data sets. </p>
-    <div id="rabbitHole4" style="display:none">This link has some information about standardizing. If you click on the yellow 
+    <div id="rabbitHole4">This link has some information about standardizing. If you click on the yellow 
     binoculars icon, you can explore the several interactive graphs the EPA has created! <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature" target="_blank">&#128007;</a></div>
     <section>
       <canvas id="standardize" height="300"></canvas>
@@ -228,13 +234,13 @@
     but can have differing numbers of neutrons. Atoms that have the same number of protons but vary 
     in their neutron count are called isotopes. Most carbon atoms have 6 neutrons, but others can have 
     7 or even 8 neutrons, and these are all considered different isotopes of carbon. Carbon atoms with 
-    6 neutrons are abbreviated as 12C, and carbon atoms with 7 or 8 neutrons are abbreviated as 13C or 14C, 
-    respectively. 12C is the lightest isotope while 14C is the heaviest. While the other two isotopes are 
-    stable, 14C is radioactive <a href="#sources">(6)</a>. This means that over time, 14C will turn into 14N through the process 
+    6 neutrons are abbreviated as C-12, and carbon atoms with 7 or 8 neutrons are abbreviated as C-13 or C-14, 
+    respectively. C-12 is the lightest isotope while C-14 is the heaviest. While the other two isotopes are 
+    stable, C-14 is radioactive <a href="#sources">(6)</a>. This means that over time, C-14 will turn into 14N through the process 
     of beta minus decay. Essentially, a neutron within the carbon atom transforms into a proton, releasing 
     an electron and an antineutrino in the process <a href="#sources">(5)</a>. </p>
-    <p>Although 12C is definitely the most abundant compared to its larger isotope counterparts, the concentrations of 
-    12C compared to 13C and 14C vary within different materials and organisms. Below is a simulation that helps
+    <p>Although C-12 is definitely the most abundant compared to its larger isotope counterparts, the concentrations of 
+    C-12 compared to C-13 and C-14 vary within different materials and organisms. Below is a simulation that helps
     demonstrate the slight ratio discrepancies within some compounds: </p>
     
     <section>
@@ -246,20 +252,20 @@
         <br>(You'll have to pay close attention to the percentage changes; they are slight but still noticable!)
         </p>
         <p id="carbonConc"></p>
-        <p>If you play with this simulation long enough, you may see a legendary green 14C atom! :)</p>
+        <p>If you play with this simulation long enough, you may see a legendary green C-14 atom! :)</p>
       </div>
     </section>
 
-    <p>Although we see rising CO2 levels in terms of ppm, the concentration of measured 14C has actually 
+    <p>Although we see rising CO2 levels in terms of ppm, the concentration of measured C-14 has actually 
     been decreasing over the past decade or so <a href="#sources">(10)</a>. Air samples from the terrestrial biosphere, ocean, 
-    and general atmosphere -- which are all considered carbon sinks -- have similar 14C concentration values, 
-    so carbon released from these sources won’t affect the ratio of 14C within the air 
-    <span ONMOUSEOVER="document.getElementById('rabbitHole5').style.display='block'">&#128007;</span> <a href="#sources">(9)</a><a href="#sources">(10)</a>. </p>
-    <div id="rabbitHole5" style="display:none">To calculate the ratio between different isotopes within a sample, 
+    and general atmosphere -- which are all considered carbon sinks -- have similar C-14 concentration values, 
+    so carbon released from these sources won’t affect the ratio of C-14 within the air 
+    <span id = "rb5">&#128007;</span> <a href="#sources">(9)</a><a href="#sources">(10)</a>. </p>
+    <div id="rabbitHole5">To calculate the ratio between different isotopes within a sample, 
     scientists use delta values: <a href="https://gml.noaa.gov/ccgg/isotopes/deltavalues.html" target="_blank">&#128007;</a></div>
-    <p>However, we do know that fossil fuels don’t have 14C because any 14C atom within the original ancient 
+    <p>However, we do know that fossil fuels don’t have C-14 because any C-14 atom within the original ancient 
     plant would have decayed by the present day <a href="#sources">(8)</a>. So burning fossil fuels, which contain a significant 
-    concentration of 12C, is changing the composition of the atmosphere!</p>
+    concentration of C-12, is changing the composition of the atmosphere!</p>
     <p>This makes sense because the 1760s was the advent of the Industrial Revolution. During this era, 
     coal was used to power steam engines and make steel through a process of smelting coal with iron <a href="#sources">(12)</a>. 
     Coal is considered a fossil fuel because it’s produced from “the remains of dead plants and animals” within 
@@ -267,10 +273,10 @@
     <p>The Industrial Revolution began in Britain and later came to other now-first-world countries such 
     as the US. This era revolutionized people’s lives through the number of new developments people now 
     had access to, including forms of transportation and electricity. Subsequently, the demand and usage 
-    for fossil fuels dramatically increased around the 1950s <span ONMOUSEOVER="document.getElementById('rabbitHole6').style.display='block'">&#128007;</span> 
+    for fossil fuels dramatically increased around the 1950s <span id = "rb6">&#128007;</span> 
     due to more people purchasing cars, using electricity, and manufacturing steel products <a href="#sources">(13)</a>. 
     Ever since, we across the globe have still been mostly using fossil fuels to power our homes, cars, and our lifestyles.</p>
-    <div id="rabbitHole6" style="display:none">I haven't been able to find something as of now, but I wonder if there's 
+    <div id="rabbitHole6">I haven't been able to find something as of now, but I wonder if there's 
     a link between the decolonization of Africa &amp; Asia and this uptick in fossil fuel consumption around the 1950s.
     <br>If you find something, please let me know!</div>
     <figure>
@@ -322,7 +328,7 @@
       <li>The Basics: Stable Carbon and the Carbon Cycle. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/stable.html">https://gml.noaa.gov/ccgg/isotopes/stable.html</a>.</li>
       <li>Lindsey, R. (2022, October 12). How do we know the build-up of carbon dioxide in the atmosphere is caused by humans? Climate.gov. <a href="https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans">https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans</a>.</li>
       <li>The Data: The Story Told from CO2 Samples. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/mixing.html">https://gml.noaa.gov/ccgg/isotopes/mixing.html</a>.</li>
-      <li>The Data: What 14C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html</a>.</li>
+      <li>The Data: What <sup>14</sup>C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html</a>.</li>
       <li>Fossil Fuel. (n.d.) ScienceDaily. <a href="https://www.sciencedaily.com/terms/fossil_fuel.htm">https://www.sciencedaily.com/terms/fossil_fuel.htm</a>.</li>
       <li>Fernihough, A. &amp; O'Rourke, K. (2020, November 4). Coal and the European Industrial Revolution. The Economic Journal, Volume 131, Issue 635, 1135-1149. <a href="https://academic.oup.com/ej/article/131/635/1135/5955447#234915689">https://academic.oup.com/ej/article/131/635/1135/5955447#234915689</a>.</li>
       <li>Stein, T. (2016, September 30). Carbon dioxide levels race past troubling milestone. National Oceanic &amp; Atmospheric Administration. <a href="https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone">https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone</a>.</li>

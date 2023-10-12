@@ -134,6 +134,7 @@ div[id*="rabbitHole"] {
     padding: 20px;
     border-radius: 3px;
     border: 2px dotted black;
+    display: none;
 }
 
 div[id*="rabbitHole"]:hover {
