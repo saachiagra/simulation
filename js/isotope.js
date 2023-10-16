@@ -116,7 +116,9 @@ function animate_i() {
     } else {
         concArray = percentageCalc(c12, c13, c14 + 0.01);
     }
-    document.getElementById("carbonConc").innerHTML = "12C (blue): " + concArray[0].toString() + "%<br>13C (red): " + concArray[1].toString() + "%<br>14C (green): " + concArray[2].toString() + "%";
+    document.getElementById("c12Conc").innerHTML = concArray[0].toString() + "%" 
+    document.getElementById("c13Conc").innerHTML = concArray[1].toString() + "%" 
+    document.getElementById("c14Conc").innerHTML = concArray[2].toString() + "%";
     
 }
 

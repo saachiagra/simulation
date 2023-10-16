@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>What's Up With the Weather?</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Climate Change Research Guidethrough">
+        <meta name="keywords" content="climate change, playable simulation">
+        <meta name="author" content="Saachi Agrawal">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@300&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="js/generalfunctions.js"></script>
+        <div id="opening">
+            <canvas id="openingBackground" height="200px"></canvas>
+            <script src="js/titleDisplay.js"></script>
+            
+            <div id="openingText">
+                <div id="verticalCenter">
+                <h1>What's Up With the Weather?</h1>
+                <h3>A Playable Simulation by Saachi Agrawal</h3>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="extra.html">Extra Information</a></li>
+            </ul>
+          </nav>
+        <h2>Extra Information</h2>
+        <p>This section is an amalgamation of write-ups I removed from the main site, additional rabbit holes (you 
+        can never have too many rabbit holes!), and additional website links that I drew some inspiration from 
+        but didn't directly cite in the article. Enjoy!
+        </p>
+        
+        <h2 id="histTemp">History of Temperature</h2>
+        <p>The history of measuring fluctuations in temperature goes all the way back to 1610, 
+        when Galileo made a thermoscope using a glass sphere containing alcohols each with different densities <a href="#sources">(3)</a>. 
+        The alcohols would rise and fall within the container based on the ambient temperature, 
+        but this device didn’t have any markings to determine the exact temperature, hence why it’s not 
+        considered a “thermometer” <a href="#sources">(3)</a>. In 1612, Santorio Santorio made a thermoscope calibrated to measure 
+        human temperature, and in 1654, Ferdinand II de’ Medici made a thermometer “to depend on the expansion 
+        and contraction of a liquid, which was independent of barometric pressure” <a href="#sources">(3)</a>. </p>
+        <p>The first set of continuous temperature readings from thermometers comes from the 
+        Central England Temperature Data Series, which started in 1659 <a href="#sources">(4)</a>. Though, we don’t have 
+        substantial data <span id = "rb1">&#128007;</span> on global temperatures before the 1880s. </p>
+        <div id="rabbitHole1">We may not have adequate thermometer readings from before, but there are other methods scientists use to calculate premodern temperatures!
+        <br>Tree rings: <a href="https://climate.nasa.gov/news/2540/tree-rings-provide-snapshots-of-earths-past-climate/" target="_blank">&#128007;</a>
+        <br>Pollen: <a href="https://www.ncei.noaa.gov/news/how-can-pollen-teach-us-about-climate" target="_blank">&#128007;</a></div>
+        
+        <h2 id="c14Decay">C-14 Radioactive Decay</h2>
+        <p>C-14 can turn into a N-14 atom through the process of beta minus decay. Essentially, a neutron within the carbon atom transforms into a proton, releasing 
+        an electron and an antineutrino in the process <a href="#sources">(5)</a>.</p>
+
+        <h2>Additional Websites for Further Reading</h2>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Global_temperature_record#/media/File:20200324_Global_average_temperature_-_NASA-GISS_HadCrut_NOAA_Japan_BerkeleyE.svg">https://en.wikipedia.org/wiki/Global_temperature_record#/media/File:20200324_Global_average_temperature_-_NASA-GISS_HadCrut_NOAA_Japan_BerkeleyE.svg</a></li>
+            <li><a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global">https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global</a></li>
+            <li><a href="https://sitn.hms.harvard.edu/flash/2014/earth-climate-tipping-point/">https://sitn.hms.harvard.edu/flash/2014/earth-climate-tipping-point/</a></li>
+            <li><a href="https://climate.nasa.gov/explore/ask-nasa-climate/3071/the-raw-truth-on-global-temperature-records/">https://climate.nasa.gov/explore/ask-nasa-climate/3071/the-raw-truth-on-global-temperature-records/</a></li>
+            <li><a href="https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880">https://qz.com/1055629/why-does-all-our-climate-data-start-in-1880</a></li>
+            <li><a href="https://aerospaceamerica.aiaa.org/features/taking-the-temperature-on-temperature/">https://aerospaceamerica.aiaa.org/features/taking-the-temperature-on-temperature/</a></li>
+            <li><a href="https://www.bas.ac.uk/data/our-data/publication/ice-cores-and-climate-change/">https://www.bas.ac.uk/data/our-data/publication/ice-cores-and-climate-change/</a></li>
+            <li><a href="https://www.ncei.noaa.gov/products/paleoclimatology/ice-core">https://www.ncei.noaa.gov/products/paleoclimatology/ice-core</a></li>
+            <li><a href="https://icecores.org/about-ice-cores">https://icecores.org/about-ice-cores</a></li>
+        </ul>
+        <footer>
+            <br>
+            <h2>Author's Note and Credits</h2>
+            <p>Hopefully, this walkthrough helped to solidify your understanding of 
+            the complex phenomenon that is climate change and also pique your interest in this area! I, 
+            unfortunately, didn’t cover everything related to this topic, and really, this walkthrough 
+            should be a starting point for more exploration. Throughout the page, I’ve included some sources 
+            for topics that interested me while making this site, but feel free to investigate on your own! <br>
+            The world, currently suffering from climate change, is your oyster.</p>
+            <h2 id="sources">Sources</h2>
+            <ol>
+              <li>What’s the Difference Between Weather and Climate? (2018, March 23). National Centers for Environmental Information. <a href="https://www.ncei.noaa.gov/news/weather-vs-climate">https://www.ncei.noaa.gov/news/weather-vs-climate</a>.</li>
+              <li>Direct measures of climate. (n.d.) University Corporation for Atmospheric Research. <a href="https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate">https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate</a>.</li>
+              <li>Grodzinsky, E., &amp; Sund Levander, M. (2019). History of the Thermometer. Understanding Fever and Body Temperature: A Cross-disciplinary Approach to Clinical Practice, 23–35. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7120475/">https://doi.org/10.1007/978-3-030-21886-7_3</a>.</li>
+              <li>Why does the temperature record shown on your "Vital Signs" page begin at 1880? (n.d.) National Aeronautics and Space Administration. <a href="https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/">https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/</a>.</li>
+              <li>The Technical Details: Radioactive Decay. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/decay.html">https://gml.noaa.gov/ccgg/isotopes/decay.html</a>.</li>
+              <li>The Technical Details: Chemistry. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/chemistry.html">https://gml.noaa.gov/ccgg/isotopes/chemistry.html</a>.</li>
+              <li>The Basics: Stable Carbon and the Carbon Cycle. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/stable.html">https://gml.noaa.gov/ccgg/isotopes/stable.html</a>.</li>
+              <li>Lindsey, R. (2022, October 12). How do we know the build-up of carbon dioxide in the atmosphere is caused by humans? Climate.gov. <a href="https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans">https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans</a>.</li>
+              <li>The Data: The Story Told from CO2 Samples. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/mixing.html">https://gml.noaa.gov/ccgg/isotopes/mixing.html</a>.</li>
+              <li>The Data: What <sup>14</sup>C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html</a>.</li>
+              <li>Fossil Fuel. (n.d.) ScienceDaily. <a href="https://www.sciencedaily.com/terms/fossil_fuel.htm">https://www.sciencedaily.com/terms/fossil_fuel.htm</a>.</li>
+              <li>Fernihough, A. &amp; O'Rourke, K. (2020, November 4). Coal and the European Industrial Revolution. The Economic Journal, Volume 131, Issue 635, 1135-1149. <a href="https://academic.oup.com/ej/article/131/635/1135/5955447#234915689">https://academic.oup.com/ej/article/131/635/1135/5955447#234915689</a>.</li>
+              <li>Stein, T. (2016, September 30). Carbon dioxide levels race past troubling milestone. National Oceanic &amp; Atmospheric Administration. <a href="https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone">https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone</a>.</li>
+              <li>Hadley Centre Central England Temperature (HadCET) dataset. (n.d.) National Climate Information Centre. <a href="https://www.metoffice.gov.uk/hadobs/hadcet/">https://www.metoffice.gov.uk/hadobs/hadcet/</a>.</li>
+              <li>Peterson, T.C., Easterling, D.R., Karl, T.R., et al. (1998) Homogeneity Adjustments of in Situ Atmospheric Climate Data: A Review. International Journal of Climatology, 18, 1493-1517. <a href="https://imedea.uib-csic.es/master/cambioglobal/Modulo_I_cod101600/Climent/Peterson_et_al.pdf">http://dx.doi.org/10.1002/(SICI)1097-0088(19981115)18:13&lt;1493::AID-JOC329&gt;3.0.CO;2-T</a>.</li>
+              <li>C, Wickham & Rohde, Robert & RA, Muller & J, Wurtele & S, Mosher. (2013). Influence of Urban Heating on the Global Temperature Land Average using Rural Sites Identified from MODIS Classifications. Geoinformatics & Geostatistics: An Overview. 01. <a href="https://static.berkeleyearth.org/papers/UHI-GIGS-1-104.pdf">http://dx.doi.org/10.4172/2327-4581.1000104</a>.</li>
+              <li>Jones, P. D. , Raper, S. C. B. , Bradley, R. S. , Diaz, H. F. , Kellyo, P. M. , & Wigley, T. M. L. . (1986). Northern Hemisphere Surface Air Temperature Variations: 1851–1984. Journal of Applied Meteorology and Climatology, 25(2), 161-179. <a href="https://journals.ametsoc.org/view/journals/apme/25/2/1520-0450_1986_025_0161_nhsatv_2_0_co_2.xml?tab_body=pdf">https://doi.org/10.1175/1520-0450(1986)025&lt;0161:NHSATV&gt;2.0.CO;2</a>.</li>
+              <li>How do weather observations become climate data? (n.d.) Climate.gov. <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data">https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data</a>.</li>
+              <li>What is the Carbon Cycle? (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://oceanservice.noaa.gov/facts/carbon-cycle.html">https://oceanservice.noaa.gov/facts/carbon-cycle.html</a>.</li>
+            </ol>
+            <br>
+        </footer>
+    </body>
+    

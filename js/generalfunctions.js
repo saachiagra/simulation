@@ -119,15 +119,17 @@ function insideRect(cmc, x1, y1, w, h, marginOfError) {
 
 
 function getRandom(max, min) {
-  return Math.floor(Math.random()*(Math.abs(max) + Math.abs(min)) + min);
+  return Math.floor(Math.random()*(max - min + 1) + min);
 }
 
 function getRandomNoRound(max, min) {
-  return Math.random()*(Math.abs(max) + Math.abs(min)) + min;
+  return Math.random()*(max - min) + min;
 }
 
 //closes rabbit hole div if clicked on
 $(document).ready(function(){
+  sizeCanvas();
+  makeOpeningCircles();
   $("span[id*='rb']").mouseover(function(){
     if (!openRabbit) {
       let id = "#rabbitHole" + $(this).attr("id")[2].toString();

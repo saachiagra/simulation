@@ -5,26 +5,44 @@
 }
 
 #opening {
-    height: 150px;
+    height: 200px;
     width: 100%;
     margin: 0;
     padding: 0;
-}
-
-canvas#openingBackground {
-    height: 100%;
-    width: 100%;
-    background-color: dimgray;
+    /* position: absolute; */
     z-index: -1;
 }
 
-h1 {
-    margin-top: 50px;
-    margin-bottom: 50px; 
-    font-size: 3em;
-    /* z-index: 1;
+canvas#openingBackground {
+    background-color: rgb(36, 36, 36);
+    z-index: -1;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+}
+
+#openingText {
     position: absolute;
-    line-height: 150px; */
+    height: 200px;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    color: white;
+}
+
+#verticalCenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    /* margin-top: 50px;
+    margin-bottom: 50px;  */
+    font-size: 3em;
 }
 
 h1, h2, h3 {
@@ -140,6 +158,22 @@ div[id*="rabbitHole"] {
 div[id*="rabbitHole"]:hover {
     box-shadow: 5px 5px 10px gray;
     cursor: pointer;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+
+footer ol a {
+    color: #7474ee;
+}
+
+footer ol a:visited {
+    color: #8758b1;
+    
 }
 
 
