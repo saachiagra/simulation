@@ -21,6 +21,29 @@ canvas#openingBackground {
     height: 200px;
 }
 
+nav > ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(206, 206, 206);
+}
+
+nav > ul > li {
+    margin: 5px 30px;
+    width: 175px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    text-transform: uppercase;
+}
+
+nav > ul > li:hover {
+    background-color: rgb(219, 219, 219);
+}
+
 #openingText {
     position: absolute;
     height: 200px;
@@ -83,6 +106,10 @@ a:hover {
 
 a:visited {
     /* color: #4c8e06; */
+}
+
+div[id*="rabbitHole"] > a:hover {
+    background-color: rgb(232, 232, 232);
 }
 
 figcaption {
@@ -176,4 +203,8 @@ footer ol a:visited {
     
 }
 
+iframe {
+    margin: auto;
+    display: block;
+}
 

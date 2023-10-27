@@ -126,7 +126,6 @@ function getRandomNoRound(max, min) {
   return Math.random()*(max - min) + min;
 }
 
-//closes rabbit hole div if clicked on
 $(document).ready(function(){
   sizeCanvas();
   makeOpeningCircles();
@@ -138,6 +137,7 @@ $(document).ready(function(){
     }
   });
 
+  //closes rabbit hole div if clicked on
   $("div[id*='rabbitHole']").click(function(){
       $(this).hide();
       openRabbit = false;
