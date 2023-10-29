@@ -32,25 +32,43 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="extra.html">Extras</a></li>
                 <li><a href="https://github.com/saachiagra/simulation" target="_blank">Github</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
+                <!-- <li><a href="feedback.html">Feedback</a></li> -->
             </ul>
           </nav>
         <h2>Extra Information</h2>
-        <p>This section is an amalgamation of write-ups I removed from the main site, additional rabbit holes (you 
+        <p>This section is an amalgamation of simulation explanations, write-ups I removed from the main site, additional rabbit holes (you 
         can never have too many rabbit holes!), and additional website links that I drew some inspiration from 
         but didn't directly cite in the article. Enjoy!
         </p>
         
+        <h2>Simulation Explanations</h2>
+        <h3 id="tempDiff">Temperature Differences</h3>
+        <p>Source <a href="#s21">(21)</a> has interesting information about different variables can influence data results.
+        The paper said that the "degree of change" caused by different thermometers and their locative relative to sunlight/shade 
+        "varies from country to country and there is no simple way to quantify the magnitude of any effect." Source <a href="#s21">(21)</a> and 
+        <a href="#s22">(22)</a> both say that the heat island effect hasn't drastically changed overall temperature data, justifying this by
+        saying "urban areas are only 0.5% of the land area". Source <a href="#s23">(23)</a> had some ranges for the difference in temperatures 
+        between urban and rural areas (1-7&deg;F).</p>
+        <h3 id="gases">Heat-Trapping Gases</h3>
+        <p>Some gases are better at trapping heat than others. Source <a href="#s24">(24)</a> has the global warming potentials 
+        of different gases, which compares how well a gas can trap heat compared to carbon dioxide (which has a GWP of 1).
+        I *tried* to reflect this difference by having the differences in area correspond to the differences in GWPs, 
+        but I had to make the radii much smaller (making the circle area smaller) so that the molecules would fit within the alloted simulation space.</p>
+        <h3 id="isotope">Carbon Isotopes</h3>
+        <p>I had to make the concentration of C-14 higher for ~educational purposes~. The ratio between
+        C-12 and C-13 (989:11) is accurate for the atmosphere, but for plants the ratio is 991:9 rather than 994:6. Source <a href="#s25">(25)</a> 
+        has the delta value for plants, and Source <a href="#s26">(26)</a> has a delta-to-percentage converter formula and atmospheric carbon isotope
+        concentrations.</p>
         <h2 id="histTemp">History of Temperature</h2>
         <p>The history of measuring fluctuations in temperature goes all the way back to 1610, 
-        when Galileo made a thermoscope using a glass sphere containing alcohols each with different densities <a href="#sources">(3)</a>. 
+        when Galileo made a thermoscope using a glass sphere containing alcohols each with different densities <a href="#s3">(3)</a>. 
         The alcohols would rise and fall within the container based on the ambient temperature, 
         but this device didn’t have any markings to determine the exact temperature, hence why it’s not 
-        considered a “thermometer” <a href="#sources">(3)</a>. In 1612, Santorio Santorio made a thermoscope calibrated to measure 
+        considered a “thermometer” <a href="#s3">(3)</a>. In 1612, Santorio Santorio made a thermoscope calibrated to measure 
         human temperature, and in 1654, Ferdinand II de’ Medici made a thermometer “to depend on the expansion 
-        and contraction of a liquid, which was independent of barometric pressure” <a href="#sources">(3)</a>. </p>
+        and contraction of a liquid, which was independent of barometric pressure” <a href="#s3">(3)</a>. </p>
         <p>The first set of continuous temperature readings from thermometers comes from the 
-        Central England Temperature Data Series, which started in 1659 <a href="#sources">(4)</a>. Though, we don’t have 
+        Central England Temperature Data Series, which started in 1659 <a href="#s4">(4)</a>. Though, we don’t have 
         substantial data <span id = "rb1">&#128007;</span> on global temperatures before the 1880s. </p>
         <div id="rabbitHole1">We may not have adequate thermometer readings from before, but there are other methods scientists use to calculate premodern temperatures!
         <br>Tree rings: <a href="https://climate.nasa.gov/news/2540/tree-rings-provide-snapshots-of-earths-past-climate/" target="_blank">&#128007;</a>
@@ -58,7 +76,7 @@
         
         <h2 id="c14Decay">C-14 Radioactive Decay</h2>
         <p>C-14 can turn into a N-14 atom through the process of beta minus decay. Essentially, a neutron within the carbon atom transforms into a proton, releasing 
-        an electron and an antineutrino in the process <a href="#sources">(5)</a>.</p>
+        an electron and an antineutrino in the process <a href="#s5">(5)</a>.</p>
 
         <h2>Additional Websites for Further Reading</h2>
         <ul>
@@ -74,34 +92,52 @@
         </ul>
         <footer>
             <br>
-            <h2>Author's Note and Credits</h2>
-            <p>Hopefully, this walkthrough helped to solidify your understanding of 
+            <h2>Credits</h2>
+            <p>Special thanks to Mr. Neno December for encouraging me to make my ideas come to life,
+            forcing me to think about climate change in a different lens, and assisting me with initial website testing and information compilations.
+            It's a cliche, but I truly couldn't have made this website without your help.</p>
+            <p>Thank you to Ashley Feng, Mr. Gaurav Johari, Saffron Liu, Dr. Kelly Mendiola, Abhinav Rachakonda, Mr. James Shockey, and Mrs. Priyanka Uppal for beta-testing
+            the website, providing me with valuable feedback on the website's functionality &amp; content, and
+            giving incredible moral support for this project I've taken on. Y'all are amazing, and I'm so grateful for all of your help :)</p>
+            <p>Thanks to my parents for being forced to listen to my lengthy ramblings about climate change &amp; coding bugs as well as for looking 
+            over parts of the website I had just finished, even when you both probably had better things to do. 
+            I would apologize for being annoying, but we all would know that I'm lying ;)</p>
+            <p>Last, but *definitely* not least, thank you (yes, YOU!) for taking the time to read &amp; interact with this website! Words aren't 
+            enough to describe my gratitude, but just know it's there in my heart.</p>
+            <!-- <p>Hopefully, this walkthrough helped to solidify your understanding of 
             the complex phenomenon that is climate change and also pique your interest in this area! I, 
             unfortunately, didn’t cover everything related to this topic, and really, this walkthrough 
             should be a starting point for more exploration. Throughout the page, I’ve included some sources 
             for topics that interested me while making this site, but feel free to investigate on your own! <br>
-            The world, currently suffering from climate change, is your oyster.</p>
+            The world, currently suffering from climate change, is your oyster.</p> -->
             <h2 id="sources">Sources</h2>
             <ol>
-              <li>What’s the Difference Between Weather and Climate? (2018, March 23). National Centers for Environmental Information. <a href="https://www.ncei.noaa.gov/news/weather-vs-climate">https://www.ncei.noaa.gov/news/weather-vs-climate</a>.</li>
-              <li>Direct measures of climate. (n.d.) University Corporation for Atmospheric Research. <a href="https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate">https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate</a>.</li>
-              <li>Grodzinsky, E., &amp; Sund Levander, M. (2019). History of the Thermometer. Understanding Fever and Body Temperature: A Cross-disciplinary Approach to Clinical Practice, 23–35. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7120475/">https://doi.org/10.1007/978-3-030-21886-7_3</a>.</li>
-              <li>Why does the temperature record shown on your "Vital Signs" page begin at 1880? (n.d.) National Aeronautics and Space Administration. <a href="https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/">https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/</a>.</li>
-              <li>The Technical Details: Radioactive Decay. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/decay.html">https://gml.noaa.gov/ccgg/isotopes/decay.html</a>.</li>
-              <li>The Technical Details: Chemistry. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/chemistry.html">https://gml.noaa.gov/ccgg/isotopes/chemistry.html</a>.</li>
-              <li>The Basics: Stable Carbon and the Carbon Cycle. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/stable.html">https://gml.noaa.gov/ccgg/isotopes/stable.html</a>.</li>
-              <li>Lindsey, R. (2022, October 12). How do we know the build-up of carbon dioxide in the atmosphere is caused by humans? Climate.gov. <a href="https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans">https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans</a>.</li>
-              <li>The Data: The Story Told from CO2 Samples. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/mixing.html">https://gml.noaa.gov/ccgg/isotopes/mixing.html</a>.</li>
-              <li>The Data: What <sup>14</sup>C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html</a>.</li>
-              <li>Fossil Fuel. (n.d.) ScienceDaily. <a href="https://www.sciencedaily.com/terms/fossil_fuel.htm">https://www.sciencedaily.com/terms/fossil_fuel.htm</a>.</li>
-              <li>Fernihough, A. &amp; O'Rourke, K. (2020, November 4). Coal and the European Industrial Revolution. The Economic Journal, Volume 131, Issue 635, 1135-1149. <a href="https://academic.oup.com/ej/article/131/635/1135/5955447#234915689">https://academic.oup.com/ej/article/131/635/1135/5955447#234915689</a>.</li>
-              <li>Stein, T. (2016, September 30). Carbon dioxide levels race past troubling milestone. National Oceanic &amp; Atmospheric Administration. <a href="https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone">https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone</a>.</li>
-              <li>Hadley Centre Central England Temperature (HadCET) dataset. (n.d.) National Climate Information Centre. <a href="https://www.metoffice.gov.uk/hadobs/hadcet/">https://www.metoffice.gov.uk/hadobs/hadcet/</a>.</li>
-              <li>Peterson, T.C., Easterling, D.R., Karl, T.R., et al. (1998) Homogeneity Adjustments of in Situ Atmospheric Climate Data: A Review. International Journal of Climatology, 18, 1493-1517. <a href="https://imedea.uib-csic.es/master/cambioglobal/Modulo_I_cod101600/Climent/Peterson_et_al.pdf">http://dx.doi.org/10.1002/(SICI)1097-0088(19981115)18:13&lt;1493::AID-JOC329&gt;3.0.CO;2-T</a>.</li>
-              <li>C, Wickham & Rohde, Robert & RA, Muller & J, Wurtele & S, Mosher. (2013). Influence of Urban Heating on the Global Temperature Land Average using Rural Sites Identified from MODIS Classifications. Geoinformatics & Geostatistics: An Overview. 01. <a href="https://static.berkeleyearth.org/papers/UHI-GIGS-1-104.pdf">http://dx.doi.org/10.4172/2327-4581.1000104</a>.</li>
-              <li>Jones, P. D. , Raper, S. C. B. , Bradley, R. S. , Diaz, H. F. , Kellyo, P. M. , & Wigley, T. M. L. . (1986). Northern Hemisphere Surface Air Temperature Variations: 1851–1984. Journal of Applied Meteorology and Climatology, 25(2), 161-179. <a href="https://journals.ametsoc.org/view/journals/apme/25/2/1520-0450_1986_025_0161_nhsatv_2_0_co_2.xml?tab_body=pdf">https://doi.org/10.1175/1520-0450(1986)025&lt;0161:NHSATV&gt;2.0.CO;2</a>.</li>
-              <li>How do weather observations become climate data? (n.d.) Climate.gov. <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data">https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data</a>.</li>
-              <li>What is the Carbon Cycle? (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://oceanservice.noaa.gov/facts/carbon-cycle.html">https://oceanservice.noaa.gov/facts/carbon-cycle.html</a>.</li>
+                <li id="s1">What’s the Difference Between Weather and Climate? (2018, March 23). National Centers for Environmental Information. <a href="https://www.ncei.noaa.gov/news/weather-vs-climate">https://www.ncei.noaa.gov/news/weather-vs-climate</a>.</li>
+                <li id="s2">Direct measures of climate. (n.d.) University Corporation for Atmospheric Research. <a href="https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate">https://scied.ucar.edu/learning-zone/how-climate-works/direct-measurements-climate</a>.</li>
+                <li id="s3">Grodzinsky, E., &amp; Sund Levander, M. (2019). History of the Thermometer. Understanding Fever and Body Temperature: A Cross-disciplinary Approach to Clinical Practice, 23–35. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7120475/">https://doi.org/10.1007/978-3-030-21886-7_3</a>.</li>
+                <li id="s4">Why does the temperature record shown on your "Vital Signs" page begin at 1880? (n.d.) National Aeronautics and Space Administration. <a href="https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/">https://climate.nasa.gov/faq/21/why-does-the-temperature-record-shown-on-your-vital-signs-page-begin-at-1880/</a>.</li>
+                <li id="s5">The Technical Details: Radioactive Decay. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/decay.html">https://gml.noaa.gov/ccgg/isotopes/decay.html</a>.</li>
+                <li id="s6">The Technical Details: Chemistry. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/chemistry.html">https://gml.noaa.gov/ccgg/isotopes/chemistry.html</a>.</li>
+                <li id="s7">The Basics: Stable Carbon and the Carbon Cycle. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/stable.html">https://gml.noaa.gov/ccgg/isotopes/stable.html</a>.</li>
+                <li id="s8">Lindsey, R. (2022, October 12). How do we know the build-up of carbon dioxide in the atmosphere is caused by humans? Climate.gov. <a href="https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans">https://www.climate.gov/news-features/climate-qa/how-do-we-know-build-carbon-dioxide-atmosphere-caused-humans</a>.</li>
+                <li id="s9">The Data: The Story Told from CO2 Samples. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/mixing.html">https://gml.noaa.gov/ccgg/isotopes/mixing.html</a>.</li>
+                <li id="s10">The Data: What <sup>14</sup>C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c14tellsus.html</a>.</li>
+                <li id="s11">Fossil Fuel. (n.d.) ScienceDaily. <a href="https://www.sciencedaily.com/terms/fossil_fuel.htm">https://www.sciencedaily.com/terms/fossil_fuel.htm</a>.</li>
+                <li id="s12">Fernihough, A. &amp; O'Rourke, K. (2020, November 4). Coal and the European Industrial Revolution. The Economic Journal, Volume 131, Issue 635, 1135-1149. <a href="https://academic.oup.com/ej/article/131/635/1135/5955447#234915689">https://academic.oup.com/ej/article/131/635/1135/5955447#234915689</a>.</li>
+                <li id="s13">Stein, T. (2016, September 30). Carbon dioxide levels race past troubling milestone. National Oceanic &amp; Atmospheric Administration. <a href="https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone">https://www.noaa.gov/stories/carbon-dioxide-levels-race-past-troubling-milestone</a>.</li>
+                <li id="s14">Hadley Centre Central England Temperature (HadCET) dataset. (n.d.) National Climate Information Centre. <a href="https://www.metoffice.gov.uk/hadobs/hadcet/">https://www.metoffice.gov.uk/hadobs/hadcet/</a>.</li>
+                <li id="s15">Peterson, T.C., Easterling, D.R., Karl, T.R., et al. (1998) Homogeneity Adjustments of in Situ Atmospheric Climate Data: A Review. International Journal of Climatology, 18, 1493-1517. <a href="https://imedea.uib-csic.es/master/cambioglobal/Modulo_I_cod101600/Climent/Peterson_et_al.pdf">http://dx.doi.org/10.1002/(SICI)1097-0088(19981115)18:13&lt;1493::AID-JOC329&gt;3.0.CO;2-T</a>.</li>
+                <li id="s16">C, Wickham & Rohde, Robert & RA, Muller & J, Wurtele & S, Mosher. (2013). Influence of Urban Heating on the Global Temperature Land Average using Rural Sites Identified from MODIS Classifications. Geoinformatics & Geostatistics: An Overview. 01. <a href="https://static.berkeleyearth.org/papers/UHI-GIGS-1-104.pdf">http://dx.doi.org/10.4172/2327-4581.1000104</a>.</li>
+                <li id="s17">Jones, P. D. , Raper, S. C. B. , Bradley, R. S. , Diaz, H. F. , Kellyo, P. M. , & Wigley, T. M. L. . (1986). Northern Hemisphere Surface Air Temperature Variations: 1851–1984. Journal of Applied Meteorology and Climatology, 25(2), 161-179. <a href="https://journals.ametsoc.org/view/journals/apme/25/2/1520-0450_1986_025_0161_nhsatv_2_0_co_2.xml?tab_body=pdf">https://doi.org/10.1175/1520-0450(1986)025&lt;0161:NHSATV&gt;2.0.CO;2</a>.</li>
+                <li id="s18">How do weather observations become climate data? (n.d.) Climate.gov. <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data">https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data</a>.</li>
+                <li id="s19">What is the Carbon Cycle? (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://oceanservice.noaa.gov/facts/carbon-cycle.html">https://oceanservice.noaa.gov/facts/carbon-cycle.html</a>.</li>
+                <li id="s20">NOAA National Centers for Environmental information, Climate at a Glance: Global Time Series, published October 2023, retrieved on October 28, 2023 from <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series">https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series</a></li>
+                <li id="s21">Jones, P. D., Raper, S. C. B., Bradley, R. S., Diaz, H. F., Kelly, P. M., & Wigley, T. M. L. (1986). Northern Hemisphere Surface Air Temperature Variations: 1851–1984. Journal of Climate and Applied Meteorology, 25(2), 161–179. <a href="https://www.geo.umass.edu/faculty/bradley/jones1986.pdf">https://www.geo.umass.edu/faculty/bradley/jones1986.pdf</a></li>
+                <li id="s22">Wickham, C., Rohde, R., Muller, R.A., Wurtele, J.S., Curry, J.A., Groom, D.E., Jacobsen, R., Perlmutter, S., Rosenfeld, A., & Mosher, S. (2013). Influence of Urban Heating on the Global Temperature Land Average using Rural Sites Identified from MODIS Classifications. <a href="https://static.berkeleyearth.org/papers/UHI-GIGS-1-104.pdf">https://static.berkeleyearth.org/papers/UHI-GIGS-1-104.pdf</a></li>
+                <li id="s23">Heat Island Effect (n.d.) United States Environmental Protection Agency. <a href="https://www.epa.gov/heatislands">https://www.epa.gov/heatislands</a></li>
+                <li id="s24">Hannah Ritchie, Pablo Rosado and Max Roser (2020) - “Greenhouse gas emissions” Published online at OurWorldInData.org. Retrieved from: <a href="https://ourworldindata.org/greenhouse-gas-emissions">https://ourworldindata.org/greenhouse-gas-emissions</a></li>
+                <li id="s25">The Data: What <sup>13</sup>C Tells Us. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/c13tellsus.html">https://gml.noaa.gov/ccgg/isotopes/c13tellsus.html</a>.</li>
+                <li id="s26">The Technical Details: Determining Delta Values. (n.d.) National Oceanic &amp; Atmospheric Administration. <a href="https://gml.noaa.gov/ccgg/isotopes/deltavalues.html">https://gml.noaa.gov/ccgg/isotopes/deltavalues.html</a>.</li>
             </ol>
             <br>
         </footer>

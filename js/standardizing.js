@@ -127,7 +127,7 @@ function animate_s() {
     let trendLine = new Line(ctx2, ccc(0, "x"), ccc(bIntercept, "y"), ccc(100, "x"), ccc(mSlope*100 + bIntercept, "y"), 5, "gray", 0.7);
 
     linRegression()
-    document.getElementById("equation").innerHTML = "Equation: y = " + mSlope.toString() + "x + " + bIntercept.toString() + "<br>R^2 Value: " + rSquared;
+    document.getElementById("equation").innerHTML = "Equation: y = " + mSlope.toString() + "x + " + bIntercept.toString() + "<br>R<sup>2</sup> Value: " + rSquared;
 }
 
 animate_s();
