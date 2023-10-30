@@ -92,7 +92,7 @@ let dataPointRadArray = [7, 7, 7, 7, 7, 7, 7, 7, 7, 7];
 let dataPointColorArray = ["red", "red", "red", "red", "red", "red", "red", "red", "red", "red"];
 let dataPointHide = [false, false, false, false, false, false, false, false, false, false];
 
-console.log(xCoorCanv);
+// console.log(xCoorCanv);
 function animate_s() {
     requestAnimationFrame(animate_s);
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);

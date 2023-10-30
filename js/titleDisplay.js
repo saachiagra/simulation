@@ -16,7 +16,7 @@ function sizeCanvas() {
     canvas4.getContext("2d").scale(ratio, ratio);
     canv4height = 200;
     canv4width = document.getElementById("opening").offsetWidth;
-    console.log("thing" + document.getElementById("opening").offsetWidth.toString());
+    // console.log("thing" + document.getElementById("opening").offsetWidth.toString());
 }
 
 // sizeCanvas();
@@ -94,9 +94,9 @@ function moveOpCircle() {
 
 }
 
-console.log("RGBA:" + opCircleColorR[1], opCircleColorG[1], opCircleColorB[1], opCircleColorA[1]);
-console.log(opCircleX);
-console.log(opCircleY);
+// console.log("RGBA:" + opCircleColorR[1], opCircleColorG[1], opCircleColorB[1], opCircleColorA[1]);
+// console.log(opCircleX);
+// console.log(opCircleY);
 
 function animate_o() {
     requestAnimationFrame(animate_o);
