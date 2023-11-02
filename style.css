@@ -120,6 +120,22 @@ figcaption {
     font-family: 'Times New Roman', serif;
 }
 
+.contain-pic {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.float-right {
+    float: right;
+    max-width: 500px;
+    margin: 0;
+}
+
+.float-right > img, .float-right > figcaption {
+    margin: 10px 30px;
+}
+
 section {
     background-color: lightgray;
     width: 90%;
