@@ -95,6 +95,8 @@
       <canvas id="tempSim"></canvas>
       <!--ABOVE FORMATTING IS: style="width:70%;max-width:1000px;"-->
       <script src="js/tempSim.js"></script>
+      <figcaption>From NOAA National Centers for Environmental information, Climate at a Glance: <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/globe/land_ocean/1/6/1850-2023">Global Time Series</a>
+      <br>[same source as <a href="#s20">(20)</a>]</figcaption>
 
       <!--<img src="img/comingsoon.jpg" alt="more features and info coming soon!!" width="400px">-->
 
@@ -131,7 +133,7 @@
       <!--TEMPERATURE SIMULATION-->
       <script src="js/tempVariables.js"></script>
       <div id="menu">
-        <p>The red dots on the left represent thermometers in a specific location. <strong>Move the thermometers around to see how temperature readings can change!</strong><span id = "rbA">&#128007;</span>
+        <p>The red dots on the left represent thermometers in a specific location. <strong>Move the thermometers around to see how temperature readings can change!</strong><span id = "rb3">&#128007;</span>
         <br> You can also change the type of thermometer using the selections below:
         </p>
         <form id="tempSel">
@@ -142,23 +144,23 @@
         <p id="temp1"></p>
       </div>
     </section>
-    <div id="rabbitHoleA">How I came up/am justifying the temperature changes in this simulation + extra information:
+    <div id="rabbitHole3">How I came up/am justifying the temperature changes in this simulation + extra information:
     <a href="extra.html#tempDiff" target="_blank">&#128007;</a>
     </div>
     
     <p>So it looks like temperature data can get skewed by the type of thermometer used and the location 
     of the device in relation to sunlight and urban spaces. </p>
-    <div id="rabbitHole3">This is the same link as the citation, but this article explains the standardizing process
+    <div id="rabbitHole4">This is the same link as the citation, but this article explains the standardizing process
     in a simple, easy-to-read manner (highly recommend checking it out)! <a href="https://www.climate.gov/maps-data/climate-data-primer/how-do-weather-observations-become-climate-data" target="_blank">&#128007;</a></div>
     <p>However, scientists have already accounted for these variations 
     before making final climate modules. After the temperature data is compilied, researchers comb through data to find 
     inconsistencies, like unnatural spikes in temperature readings, or create algorithms to smooth 
-    out data points <a href="#s17">(17)</a><a href="#s18">(18)</a><span id = "rb3">&#128007;</span>. 
-    The math behind these standardizations <span id = "rb4">&#128007;</span> is pretty complex, but the overall 
+    out data points <a href="#s17">(17)</a><a href="#s18">(18)</a><span id = "rb4">&#128007;</span>. 
+    The math behind these standardizations <span id = "rb5">&#128007;</span> is pretty complex, but the overall 
     process consists of strategically minimizing any abnormal variations that have arisen from data collection 
     methods, ensuring that the data accurately portrays a region's characteristics. Below is a very simple demonstration of how 
     scientists standardize data sets: a linear regression, which uses a best-fit line to approximate the trend of discrete data points. </p>
-    <div id="rabbitHole4">This link has some information about standardizing. If you click on the yellow 
+    <div id="rabbitHole5">This link has some information about standardizing. If you click on the yellow 
     binoculars icon, you can explore the several interactive graphs the EPA has created! <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature" target="_blank">&#128007;</a></div>
     <section>
       <canvas id="standardize" height="300"></canvas>
@@ -171,9 +173,13 @@
         <button onclick="resetDataPoints()">Reset</button>
       </div>
     </section>
-    <p>Let's look at the graph again <a href="#s20">(20)</a>.</p>
+    <p>Let's look at the graph again <a href="#s20">(20)</a>. <span id = "rb6">&#128007;</span></p>
+    <div id="rabbitHole6">You can see how the temperature data was collected along with more visuals (click on the "Launch" buttons)
+    at this link: <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/national" target="_blank">&#128007;</a></div>
     <canvas id="tempSim2"></canvas>
     <script src="js/tempSim2.js"></script>
+    <figcaption>From NOAA National Centers for Environmental information, Climate at a Glance: <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/globe/land_ocean/1/6/1850-2023">Global Time Series</a>
+    <br>[same source as <a href="#s20">(20)</a>]</figcaption>
     <p>You should notice that the data entries are negative or positive, and they range from -1 &deg;C to 1.5 &deg;C. 
     This is because these data points are measuring 
     anomalies from a standard determined from the average temperature over the 20th century: 1901 to 2000. 
@@ -196,7 +202,7 @@
       <canvas id="Canvas2" height="300"></canvas>
       <script src="js/heatTrapping.js"></script>
       <div id="menu">
-        <p><strong>Choose the type of molecule you want to observe using the selections below.</strong> You can also determine the number of molecules on the screen using the slider. <span id = "rbC">&#128007;</span>
+        <p><strong>Choose the type of molecule you want to observe using the selections below.</strong> You can also determine the number of molecules on the screen using the slider. <span id = "rb7">&#128007;</span>
         <br>Once you're happy with your choices, press the "Start" button to see how light particles (the yellow dots) interact with the molecules.
         <br>Click "Reset" to stop the simulation or to change your selection(s).
         </p>
@@ -213,7 +219,7 @@
         <button onclick="reset()">Reset</button>
       </div>
     </section>
-    <div id="rabbitHoleC">Why the radii of the gases are different: <a href="extra.html#gases" target="_blank">&#128007;</a>
+    <div id="rabbitHole7">Why the radii of the gases are different: <a href="extra.html#gases" target="_blank">&#128007;</a>
     </div>
     
     <p>As you may already know, scientists use the term “greenhouse gases” to categorize these gases due to their 
@@ -258,8 +264,8 @@
     6 neutrons are abbreviated as C-12, and carbon atoms with 7 or 8 neutrons are abbreviated as C-13 or C-14, 
     respectively. C-12 is the lightest isotope while C-14 is the heaviest. While the other two isotopes are 
     stable, C-14 is radioactive <a href="#s6">(6)</a>. This means that over time, C-14 will turn into N-14 (a nitrogen atom 
-    with 7 neutrons). <span id = "rb6">&#128007;</span> </p>
-    <div id="rabbitHole6">Read some more about C-14 radioactive decay in the "Extra Information" section! (this stuff is cool)
+    with 7 neutrons). <span id = "rb8">&#128007;</span> </p>
+    <div id="rabbitHole8">Read some more about C-14 radioactive decay in the "Extra Information" section! (this stuff is cool)
     <a href="extra.html#c14Decay" target="_blank">&#128007;</a></div>
     <p>Although C-12 is definitely the most abundant on Earth compared to its larger isotope counterparts, the exact concentrations of 
     C-12 compared to C-13 and C-14 vary within different materials and organisms. Below is a simulation that helps
@@ -270,22 +276,22 @@
       <script src="js/isotope.js"></script>
       <div id="menu">
         <p>The moving circles on the left represent different carbon isotopes. <strong>Move the black square around to see 
-        the carbon isotope concentrations of the atmosphere, plants, and fossil fuels!<span id = "rbB">&#128007;</span></strong>
+        the carbon isotope concentrations of the atmosphere, plants, and fossil fuels!<span id = "rb9">&#128007;</span></strong>
         <br>(You'll have to pay close attention to the percentage changes; they are slight but still noticable!)
         </p>
         <p id="carbonConc">C-12 (blue): <span id="c12Conc"></span><br>C-13 (red): <span id="c13Conc"></span><br>C-14 (green): <span id="c14Conc"></span></p>
         <p>If you play with this simulation long enough, you may see a legendary green C-14 atom! :&#41</p>
       </div>
     </section>
-    <div id="rabbitHoleB"> Where the carbon isotope percentages came from: <a href="extra.html#isotope" target="_blank">&#128007;</a>
+    <div id="rabbitHole9"> Where the carbon isotope percentages came from: <a href="extra.html#isotope" target="_blank">&#128007;</a>
     </div>
 
     <p>Although we see rising CO<sub>2</sub> levels in terms of ppm, the concentration of measured C-14 has actually 
     been decreasing over the past decade or so <a href="#s10">(10)</a>. Air samples from the terrestrial biosphere, ocean, 
     and general atmosphere&#8212;which are all considered carbon sinks&#8212;have similar C-14 concentration values, 
     so carbon released from these sources won't affect the ratio of C-14 within the air 
-    <span id = "rb5">&#128007;</span> <a href="#s9">(9)</a><a href="#s10">(10)</a>. </p>
-    <div id="rabbitHole5">To calculate the ratio between different isotopes within a sample, 
+    <span id = "rbA">&#128007;</span> <a href="#s9">(9)</a><a href="#s10">(10)</a>. </p>
+    <div id="rabbitHoleA">To calculate the ratio between different isotopes within a sample, 
     scientists use delta values: <a href="https://gml.noaa.gov/ccgg/isotopes/deltavalues.html" target="_blank">&#128007;</a></div>
     <p>However, we do know that fossil fuels don't have C-14 because any C-14 atom within the original ancient 
     plant would have decayed by the present day <a href="#s8">(8)</a>. So burning fossil fuels, releasing a greater proportion 
@@ -300,10 +306,10 @@
     <p>The Industrial Revolution began in Britain and later spread to other now-first-world countries, such 
     as the United States. This era revolutionized people's lives through the number of new developments people now 
     had access to, including forms of transportation and electricity. Subsequently, the demand and usage 
-    for fossil fuels dramatically increased around the 1950s <span id = "rb7">&#128007;</span> 
+    for fossil fuels dramatically increased around the 1950s <span id = "rbB">&#128007;</span> 
     due to more people purchasing cars, using electricity, and manufacturing steel products <a href="#s13">(13)</a>. 
     Ever since, we across the globe use mainly fossil fuels to power our homes, cars, and our lifestyles.</p>
-    <div id="rabbitHole7">I haven't been able to find something as of now, but I wonder if there's 
+    <div id="rabbitHoleB">I haven't been able to find something as of now, but I wonder if there's 
     a link between the decolonization of Africa &amp; Asia and this uptick in fossil fuel consumption around the 1950s.
     <br>If you find something, please let me know!</div>
     <figure>
