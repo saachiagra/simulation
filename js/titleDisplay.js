@@ -10,11 +10,11 @@ canv4width = 0;
 function sizeCanvas() {
     const ratio = window.devicePixelRatio;
     canvas4.width = window.innerWidth * ratio;
-    canvas4.height = 200 * ratio;
+    canvas4.height = 225 * ratio;
     canvas4.style.width = document.getElementById("opening").offsetWidth + "px";
-    canvas4.style.height = 200 + "px";
+    canvas4.style.height = 225 + "px";
     canvas4.getContext("2d").scale(ratio, ratio);
-    canv4height = 200;
+    canv4height = 225;
     canv4width = document.getElementById("opening").offsetWidth;
     // console.log("thing" + document.getElementById("opening").offsetWidth.toString());
 }

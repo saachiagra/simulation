@@ -5,7 +5,7 @@
 }
 
 #opening {
-    height: 200px;
+    height: 225px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ canvas#openingBackground {
     z-index: -1;
     margin: 0;
     width: 100%;
-    height: 200px;
+    height: 225px;
 }
 
 nav > ul {
@@ -28,16 +28,18 @@ nav > ul {
     flex-direction: row;
     justify-content: center;
     background-color: rgb(206, 206, 206);
+    z-index: 5;
 }
 
 nav > ul > li {
-    margin: 5px 30px;
+    margin: 5px 5px;
     width: 175px;
     height: 40px;
     line-height: 40px;
     text-align: center;
     font-family: 'Libre Franklin', sans-serif;
     text-transform: uppercase;
+    z-index: 5;
 }
 
 nav > ul > li:hover {
@@ -46,7 +48,7 @@ nav > ul > li:hover {
 
 #openingText {
     position: absolute;
-    height: 200px;
+    height: 225px;
     width: 100%;
     top: 0;
     z-index: 1;
@@ -55,7 +57,9 @@ nav > ul > li:hover {
 
 #verticalCenter {
     margin: 0;
+    padding: 20px;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
