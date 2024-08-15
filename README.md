@@ -20,8 +20,3 @@ Only after understanding their side can we address any misconceptions they may h
 
 I hope that this website makes people (and hopefully you as well!) think more about how we 
 gather and interpret information.
-
-Right now, this website is a ***work-in-progress***! 
-I've have all the content laid out (though there's always more I could write about), and I'm currently aiming to make the website look better in the near future. 
-
-*If you want to help me with CSS, please fill out this [feedback form](https://forms.gle/d4Pdm6epfrTMDG6X8), which is also linked on the website!*
